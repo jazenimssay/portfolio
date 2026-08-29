@@ -1,0 +1,77 @@
+# Decap CMS configuration
+# Edits commit to your repository; Netlify redeploys automatically.
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/img/work"
+public_folder: "assets/img/work"
+
+site_url: /
+display_url: /
+
+collections:
+  - name: "portfolio"
+    label: "Portfolio"
+    files:
+      - name: "projects"
+        label: "Projects"
+        file: "assets/data/projects.json"
+        description: "Add, write and reorder case studies. Drag rows to change the order they appear in the drawer."
+        fields:
+          - name: "projects"
+            label: "Projects"
+            label_singular: "Project"
+            widget: "list"
+            summary: "{{fields.no}} — {{fields.title}}"
+            collapsed: true
+            fields:
+
+              # --- Card ---
+              - { name: "title", label: "Title", widget: "string" }
+              - name: "cat"
+                label: "Section"
+                widget: "select"
+                options:
+                  - { label: "Branding",        value: "branding" }
+                  - { label: "Digital & Print", value: "digital" }
+                  - { label: "Product Design",  value: "product" }
+              - { name: "no",   label: "Case number", widget: "string", hint: "Three digits, e.g. 006" }
+              - { name: "year", label: "Year", widget: "string", required: false }
+              - { name: "meta", label: "Discipline line", widget: "string", hint: "Shown on the card, e.g. Identity · Cinema" }
+              - name: "image"
+                label: "Cover image"
+                widget: "image"
+                required: false
+                hint: "Landscape works best."
+              - name: "size"
+                label: "Card size"
+                widget: "select"
+                default: "regular"
+                options:
+                  - { label: "Regular",              value: "regular" }
+                  - { label: "Wide — two columns",   value: "wide" }
+                  - { label: "Tall — two rows",      value: "tall" }
+                  - { label: "Feature — two by two", value: "feature" }
+
+              # --- Case study page ---
+              - { name: "summary",  label: "Short summary", widget: "text", required: false, hint: "One or two sentences, shown at the top of the project page." }
+              - { name: "client",   label: "Client",   widget: "string", required: false }
+              - { name: "role",     label: "My role",  widget: "string", required: false }
+              - { name: "services", label: "Services", widget: "string", required: false, hint: "Comma separated." }
+              - name: "body"
+                label: "The write-up"
+                widget: "markdown"
+                required: false
+                hint: "Headings, paragraphs, lists, quotes and images. Use the toolbar — no code needed."
+              - name: "gallery"
+                label: "Image gallery"
+                widget: "list"
+                required: false
+                summary: "{{fields.caption}}"
+                fields:
+                  - { name: "src",     label: "Image",   widget: "image" }
+                  - { name: "caption", label: "Caption", widget: "string", required: false }
+
+              - { name: "link", label: "External link", widget: "string", required: false, hint: "Optional — adds a button on the project page." }

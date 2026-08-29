@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#245edb" />
+  <title>Yassmine OS — Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+<body>
+  <a class="skip-link" href="#desktop">Skip to desktop</a>
+  <main class="desktop" id="desktop">
+    <div class="desktop-icons">
+      <button class="desktop-icon open-popup" data-target="portfolioPopup">
+        <img src="assets/img/portfolio-icon.png" alt="" />
+        <span>Portfolio</span>
+      </button>
+
+      <button class="desktop-icon open-popup" data-target="aboutPopup">
+        <img src="assets/img/community-icon.png" alt="" />
+        <span>About Me</span>
+      </button>
+
+      <button class="desktop-icon open-popup" data-target="hirePopup">
+        <img src="assets/img/work-icon.png" alt="" />
+        <span>Work with Me</span>
+      </button>
+    </div>
+
+    <section class="hero-copy" aria-label="Introduction">
+      <h1>Hi, I'm Yassmine</h1>
+      <h2 class="hero-role">
+        <span id="typedRole"></span><span class="typing-cursor">_</span>
+      </h2>
+      <p class="hero-description">
+      With 5+ years of experience, I help businesses turn their ideas into polished experiences.
+      </p>
+      <div class="hero-actions">
+        <button class="xp-button primary open-popup" data-target="portfolioPopup">Explore my work</button>
+        <button class="xp-button open-popup" data-target="hirePopup">Start a project</button>
+      </div>
+    </section>
+    <button class="yuki open-popup" data-target="hobbiesPopup" aria-label="Open Yuki's studio">
+      <span class="yuki-speech">pspsps...</span>
+      <img class="yuki-cat" src="assets/img/yuki.png" alt="Yuki" />
+    </button>
+
+    <div class="taskbar" id="taskbar">
+      <button
+        class="start-button"
+        id="startButton"
+        data-target="menuPopup"
+        aria-haspopup="true"
+        aria-expanded="false"
+        type="button"
+      >
+        <img class="start-icon" src="assets/img/logo.png" alt="" />
+        <strong>start</strong>
+      </button>
+
+      <div class="taskbar-divider" aria-hidden="true"></div>
+
+      <div class="taskbar-apps" id="taskbarApps" aria-label="Open applications"></div>
+
+      <div class="taskbar-tray" aria-label="Notification area">
+
+        <div class="taskbar-tray-icons" id="trayIcons">
+
+          <button
+            class="tray-icon volume-button"
+            id="volume"
+            type="button"
+            title="Volume: on"
+            aria-label="Volume: on"
+            aria-pressed="false"
+          ><svg class="volume-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+              <path class="volume-speaker" d="M1.5 6.25h3L8.25 3v10L4.5 9.75h-3z" />
+              <path class="volume-wave volume-wave-1" d="M10 6a3 3 0 0 1 0 4" />
+              <path class="volume-wave volume-wave-2" d="M11.75 4.25a5.5 5.5 0 0 1 0 7.5" />
+              <path class="volume-mute" d="M10.25 5.75l4 4m0-4l-4 4" />
+            </svg></button>
+        </div>
+
+        <div
+          class="taskbar-clock"
+          id="taskbarClock"
+          title=""
+          aria-label="Current time"
+        >
+          <span id="time"></span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Portfolio -->
+  <section class="popup-window" id="portfolioPopup" data-title="Portfolio" style="--x: 10vw; --y: 10vh;">
+    <header class="popup-header">
+      <span><img src="assets/img/portfolio-icon.png" alt="">Portfolio</span>
+      <div class="window-controls">
+        <button class="minimize-popup" title="Minimize" aria-label="Minimize"></button>
+        <button class="maximize-popup" title="Maximize" aria-label="Maximize"></button>
+        <button class="close-popup" title="Close" aria-label="Close"></button>
+      </div>
+    </header>
+    <div class="popup-content portfolio-content">
+
+      <div class="case-header">
+        <div>
+          <span class="case-label">CASE FILES</span>
+          <h2>Everything I&rsquo;ve worked on, filed.</h2>
+        </div>
+      </div>
+
+      <div class="case-dividers" role="tablist" aria-label="Filter by discipline">
+        <button class="divider-tab active" role="tab" aria-selected="true" data-filter="all">All</button>
+        <button class="divider-tab" role="tab" aria-selected="false" data-filter="branding">Branding</button>
+        <button class="divider-tab" role="tab" aria-selected="false" data-filter="digital">Digital &amp; Print</button>
+        <button class="divider-tab" role="tab" aria-selected="false" data-filter="product">Product Design</button>
+      </div>
+
+      <div class="case-drawer" id="caseDrawer"></div>
+
+    </div>
+    <footer class="status-bar" id="caseStatus">5 file(s)</footer>
+  </section>
+
+  <!-- About -->
+  <section class="popup-window" id="aboutPopup" data-title="About Me" style="--x: 34vw; --y: 14vh;">
+    <header class="popup-header">
+      <span><img src="assets/img/community-icon.png" alt="">About Yassmine</span>
+      <div class="window-controls"><button class="minimize-popup" title="Minimize" aria-label="Minimize"></button><button class="maximize-popup" title="Maximize" aria-label="Maximize"></button><button class="close-popup" title="Close" aria-label="Close"></button></div>
+    </header>
+    <div class="popup-content about-content library">
+
+      <!-- Reader card -->
+      <div class="library-header">
+        <div class="reader-avatar">
+          <img src="assets/img/logo.png" alt="">
+        </div>
+        <div class="reader-meta">
+          <h2>Ouaras Nouara El Yassmine</h2>
+          <p>Product Designer &middot; Algiers</p>
+        </div>
+        <div class="reading-progress">
+          <span class="progress-label"><b id="chaptersRead">1</b> of 6 chapters opened</span>
+          <div class="progress-track"><i id="progressFill" style="width:16.6%"></i></div>
+        </div>
+      </div>
+
+      <!-- Shelf -->
+      <div class="shelf-wrap">
+
+        <!-- Fairy lights -->
+        <div class="fairy-lights" aria-hidden="true">
+          <svg class="fairy-wire" viewBox="0 0 100 20" preserveAspectRatio="none">
+            <path vector-effect="non-scaling-stroke"
+                  d="M0,3 Q6,13 12.5,4 Q19,14 25,4.5 Q32,14.5 38,4 Q45,14 51,4.5
+                     Q58,14.5 64,4 Q71,14 77,4.5 Q84,14.5 90,4 Q96,13 100,3" />
+          </svg>
+          <i style="--x:6%;  --t:3.4s; --d:0s"></i>
+          <i style="--x:19%; --t:4.1s; --d:-1.2s"></i>
+          <i style="--x:32%; --t:3.7s; --d:-2.4s"></i>
+          <i style="--x:45%; --t:4.6s; --d:-0.7s"></i>
+          <i style="--x:58%; --t:3.9s; --d:-3.1s"></i>
+          <i style="--x:71%; --t:4.3s; --d:-1.8s"></i>
+          <i style="--x:84%; --t:3.6s; --d:-2.9s"></i>
+          <i style="--x:96%; --t:4.4s; --d:-0.4s"></i>
+        </div>
+
+        <!-- Golden motes -->
+        <div class="shelf-motes" aria-hidden="true">
+          <span style="--x:11%; --d:0s;   --t:21s; --s:3px"></span>
+          <span style="--x:23%; --d:-6s;  --t:26s; --s:2px"></span>
+          <span style="--x:37%; --d:-12s; --t:19s; --s:3px"></span>
+          <span style="--x:49%; --d:-3s;  --t:28s; --s:2px"></span>
+          <span style="--x:62%; --d:-15s; --t:23s; --s:3px"></span>
+          <span style="--x:74%; --d:-9s;  --t:20s; --s:2px"></span>
+          <span style="--x:88%; --d:-18s; --t:25s; --s:3px"></span>
+        </div>
+
+        <!-- Trailing ivy -->
+        <svg class="shelf-ivy" viewBox="0 0 120 150" aria-hidden="true">
+          <path class="ivy-stem" d="M8,0 C14,26 4,44 12,66 C20,88 8,104 16,130" />
+          <g class="ivy-leaves">
+            <ellipse cx="18" cy="18"  rx="9"  ry="6"  transform="rotate(28 18 18)"  />
+            <ellipse cx="4"  cy="34"  rx="8"  ry="5.5" transform="rotate(-34 4 34)" />
+            <ellipse cx="20" cy="52"  rx="9.5" ry="6.5" transform="rotate(22 20 52)" />
+            <ellipse cx="5"  cy="72"  rx="8"  ry="5.5" transform="rotate(-28 5 72)" />
+            <ellipse cx="21" cy="92"  rx="9"  ry="6"  transform="rotate(31 21 92)" />
+            <ellipse cx="7"  cy="112" rx="7.5" ry="5" transform="rotate(-24 7 112)" />
+            <ellipse cx="19" cy="132" rx="8"  ry="5.5" transform="rotate(26 19 132)" />
+          </g>
+        </svg>
+
+        <div class="shelf">
+
+          <div class="shelf-books" role="tablist" aria-label="Chapters">
+
+            <button class="book active" data-book="origin" style="--spine:#c0765a; --h:100%; --w:52px"
+                    role="tab" aria-selected="true" aria-controls="bookOrigin">
+              <span class="book-title">The Origin Story</span>
+              <span class="book-mark">&#10022;</span>
+            </button>
+
+            <button class="book" data-book="work" style="--spine:#6d8f91; --h:97%; --w:40px"
+                    role="tab" aria-selected="false" aria-controls="bookWork">
+              <span class="book-title">Where I&rsquo;ve Worked</span>
+              <span class="book-mark">&#10023;</span>
+            </button>
+
+            <button class="book" data-book="toolkit" style="--spine:#849a6f; --h:98%; --w:58px"
+                    role="tab" aria-selected="false" aria-controls="bookToolkit">
+              <span class="book-title">The Toolkit</span>
+              <span class="book-mark">&#10086;</span>
+            </button>
+
+            <button class="book" data-book="quests" style="--spine:#c99b52; --h:95%; --w:38px"
+                    role="tab" aria-selected="false" aria-controls="bookQuests">
+              <span class="book-title">Notable Quests</span>
+              <span class="book-mark">&#9790;</span>
+            </button>
+
+            <button class="book" data-book="margins" style="--spine:#94789e; --h:96%; --w:48px"
+                    role="tab" aria-selected="false" aria-controls="bookMargins">
+              <span class="book-title">Notes in the Margins</span>
+              <span class="book-mark">&#10087;</span>
+            </button>
+
+            <button class="book" data-book="letter" style="--spine:#bd7f80; --h:93%; --w:42px; --lean:7deg"
+                    role="tab" aria-selected="false" aria-controls="bookLetter">
+              <span class="book-title">Write to Me</span>
+              <span class="book-mark">&#10047;</span>
+            </button>
+
+          </div>
+
+          <!-- Potted plant -->
+          <svg class="shelf-pot" viewBox="0 0 54 74" aria-hidden="true">
+            <g class="pot-foliage">
+              <ellipse cx="27" cy="20" rx="11" ry="7.5" transform="rotate(-14 27 20)" />
+              <ellipse cx="14" cy="27" rx="10" ry="6.5" transform="rotate(-40 14 27)" />
+              <ellipse cx="40" cy="27" rx="10" ry="6.5" transform="rotate(40 40 27)" />
+              <ellipse cx="20" cy="38" rx="9"  ry="6"   transform="rotate(-24 20 38)" />
+              <ellipse cx="35" cy="38" rx="9"  ry="6"   transform="rotate(24 35 38)" />
+              <ellipse cx="27" cy="32" rx="8"  ry="5.5" />
+            </g>
+            <path class="pot-body" d="M13,46 L41,46 L37,72 L17,72 Z" />
+            <rect class="pot-rim" x="10" y="42" width="34" height="7" rx="2" />
+          </svg>
+
+        </div>
+        <div class="shelf-plank" aria-hidden="true"></div>
+      </div>
+
+      <!-- Open book -->
+      <div class="book-spread">
+
+        <article class="book-page active" id="bookOrigin" role="tabpanel">
+          <span class="page-chapter">Chapter I</span>
+          <h3>The Origin Story</h3>
+
+          <aside class="margin-note">this is the whole job, really</aside>
+
+          <p class="page-drop">I like turning complicated ideas into things people instantly understand.</p>
+
+          <p class="has-dropcap">That has taken me where a wrong click has consequences. A biobanking app, where badly logged data can invalidate research. A crowdfunding platform, where strangers decide whether to trust a startup with their money. Complexity isn&rsquo;t the problem in either case &mdash; unexplained complexity is.</p>
+        </article>
+
+        <article class="book-page" id="bookWork" role="tabpanel">
+          <span class="page-chapter">Chapter II</span>
+          <h3>Where I&rsquo;ve Worked</h3>
+          <aside class="margin-note">80+ decks. I counted.</aside>
+          <ul class="timeline">
+            <li>
+              <b>Graphic &amp; Product Designer</b>
+              <small>Freelance &middot; 2022 &ndash; present</small>
+              <p>Redesigned the Confirmoo site and web app, built Yinvesti from research through final UI, and shaped brand identities for a string of startups. Also mentored a designer from zero to their first role.</p>
+            </li>
+            <li>
+              <b>Lead Graphic &amp; Product Designer</b>
+              <small>DiData &middot; 2023 &ndash; 2025</small>
+              <p>Built a scalable UI kit and modular design framework in Figma, led the website redesign, refined the visual identity, and produced 80+ decks and campaigns with product, engineering and marketing.</p>
+            </li>
+            <li>
+              <b>Graphic Designer</b>
+              <small>Glinted &middot; 2022 &ndash; 2023</small>
+              <p>Social and print work for two in-house brands, plus event materials &mdash; and a seat in the strategy sessions behind two major campaigns.</p>
+            </li>
+          </ul>
+        </article>
+
+        <article class="book-page" id="bookToolkit" role="tabpanel">
+          <span class="page-chapter">Chapter III</span>
+          <h3>The Toolkit</h3>
+          <aside class="margin-note">the site you&rsquo;re on is the homework</aside>
+
+          <h4>Design</h4>
+          <div class="chips">
+            <span>Product Design</span><span>UI Design</span><span>UX Design</span>
+            <span>User Research</span><span>Wireframing</span><span>Prototyping</span>
+            <span>Design Systems</span><span>Brand Identity</span><span>Visual Design</span>
+          </div>
+
+          <h4>Software</h4>
+          <div class="chips">
+            <span>Figma</span><span>Illustrator</span><span>Photoshop</span><span>Adobe CC</span>
+          </div>
+
+          <h4>Learning</h4>
+          <div class="chips">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git</span>
+          </div>
+
+          <h4>Languages</h4>
+          <ul class="langs">
+            <li><span>Arabic</span><i style="--lvl:100%"></i><em>Native</em></li>
+            <li><span>English</span><i style="--lvl:85%"></i><em>Proficient</em></li>
+            <li><span>French</span><i style="--lvl:70%"></i><em>Advanced</em></li>
+          </ul>
+        </article>
+
+        <article class="book-page" id="bookQuests" role="tabpanel">
+          <span class="page-chapter">Chapter IV</span>
+          <h3>Notable Quests</h3>
+          <aside class="margin-note">hardest brief I&rsquo;ve had &mdash; and my favourite</aside>
+          <div class="quest">
+            <b>Redesigned a biobanking platform</b>
+            <p>Led a critical redesign of DiData&rsquo;s biobanking software with a modular, user-centered approach &mdash; making genuinely complex tasks navigable.</p>
+          </div>
+          <div class="quest">
+            <b>Built a crowdfunding platform</b>
+            <p>Designed Yinvesti end to end, connecting investors with startups &mdash; UX research through to final UI.</p>
+          </div>
+          <div class="quest">
+            <b>Cross-channel brand systems</b>
+            <p>Cohesive visuals across social, web and print for brands in travel, health, tech and education.</p>
+          </div>
+        </article>
+
+        <article class="book-page" id="bookMargins" role="tabpanel">
+          <span class="page-chapter">Chapter V</span>
+          <h3>Notes in the Margins</h3>
+          <aside class="margin-note">ask me about the reading list</aside>
+          <p class="page-drop">The things that aren&rsquo;t on the CV but show up in the work anyway.</p>
+          <div class="quest">
+            <b>Psychology &amp; human behaviour</b>
+            <p>Why people hesitate, misread a label, or abandon a flow halfway. Empathy is a design tool, not a soft skill.</p>
+          </div>
+          <div class="quest">
+            <b>Stubborn problem-solving</b>
+            <p>Naturally driven to figure things out alone &mdash; stubborn in the best way when it comes to turning a vision into a real thing.</p>
+          </div>
+          <div class="quest">
+            <b>Reading, constantly</b>
+            <p>Hence the shelf. Books are where most of the interesting ideas come from, and where I go when a problem won&rsquo;t budge.</p>
+          </div>
+        </article>
+
+        <article class="book-page" id="bookLetter" role="tabpanel">
+          <span class="page-chapter">Chapter VI</span>
+          <h3>Write to Me</h3>
+          <aside class="margin-note">I reply faster than you&rsquo;d think</aside>
+          <p class="page-drop">Got something complicated that needs making clear? Let&rsquo;s talk.</p>
+
+          <div class="library-card">
+            <div class="card-head">
+              <span>Ouaras Yassmine</span>
+              <small>Product Designer</small>
+            </div>
+            <ul class="card-rows">
+              <li><span>Email</span><a href="mailto:ouaras.yassmine@gmail.com">ouaras.yassmine@gmail.com</a></li>
+              <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/yassmine-ouaras/" target="_blank" rel="noopener">/in/yassmine-ouaras</a></li>
+              <li><span>Portfolio</span><a href="https://ouaras-yassmine-portfolio.notion.site/Hi-I-m-Yassmine-1af8509314388043adb9c99d9ff3be45" target="_blank" rel="noopener">Full case studies</a></li>
+              <li><span>Based in</span><span>Algiers &middot; open to remote</span></li>
+            </ul>
+            <div class="card-stamp">AVAILABLE<br><small>for new projects</small></div>
+          </div>
+
+          <div class="letter-actions">
+            <button class="xp-button primary open-popup" data-target="hirePopup">Start a project</button>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Hire -->
+  <section class="popup-window hire-window" id="hirePopup" data-title="Work with Me" style="--x: 18vw; --y: 15vh;">
+    <header class="popup-header">
+      <span><img src="assets/img/work-icon.png" alt="">Work with Me</span>
+      <div class="window-controls"><button class="minimize-popup" title="Minimize" aria-label="Minimize"></button><button class="maximize-popup" title="Maximize" aria-label="Maximize"></button><button class="close-popup" title="Close" aria-label="Close"></button></div>
+    </header>
+    <form class="popup-content hire-form" data-endpoint="" novalidate>
+
+      <h2 class="hire-title">What can I make for you?</h2>
+
+      <div class="bento">
+
+        <div class="cell cell-name">
+          <label for="hireName">Your name</label>
+          <input id="hireName" name="name" type="text" placeholder="Alice Example" required data-hint="How should I address you?">
+        </div>
+
+        <div class="cell cell-email">
+          <label for="hireEmail">Your email</label>
+          <input id="hireEmail" name="email" type="email" placeholder="alice@example.com" required data-hint="Where I'll send my reply.">
+        </div>
+
+        <div class="cell cell-art">
+          <div class="art-frame" id="serviceArt" data-service="" aria-hidden="true"></div>
+          <span class="service-note" id="serviceCaption">Pick a service</span>
+        </div>
+
+        <div class="cell cell-phone">
+          <label for="hirePhone">Phone</label>
+          <input id="hirePhone" name="phone" type="tel" placeholder="+213 000 000 000" autocomplete="tel" data-hint="Only if you'd rather talk than type.">
+        </div>
+
+        <div class="cell cell-service">
+          <label for="hireService">You need</label>
+          <select id="hireService" name="service" required data-hint="Pick the closest fit — we can refine it later.">
+            <option value="">Choose a service...</option>
+            <option>Branding / Logo</option>
+            <option>Product Design</option>
+            <option>Social Media Design</option>
+            <option>Print Design</option>
+            <option>Something else</option>
+          </select>
+        </div>
+
+        <div class="cell cell-details">
+          <label for="hireDetails">Details</label>
+          <textarea id="hireDetails" name="details" placeholder="What's the idea? What needs designing? What are you hoping to achieve?" required data-hint="The messy version is fine."></textarea>
+        </div>
+
+        <div class="cell cell-budget">
+          <label for="hireBudget">Budget</label>
+          <select id="hireBudget" name="budget" data-hint="A rough range is genuinely useful.">
+            <option>Not sure yet</option><option>Under &euro;500</option><option>&euro;500&ndash;&euro;1,000</option><option>&euro;1,000&ndash;&euro;2,500</option><option>&euro;2,500+</option>
+          </select>
+        </div>
+
+        <div class="cell cell-time">
+          <label for="hireTimeline">Timeline</label>
+          <input id="hireTimeline" name="timeline" type="text" placeholder="e.g. September 2026" data-hint="When do you need this by?">
+        </div>
+
+      </div>
+
+      <button class="xp-button primary hire-send" type="submit">Send request</button>
+
+      <div class="response" aria-live="polite"></div>
+
+    </form>
+    <footer class="status-bar" id="hireStatus">Ready</footer>
+  </section>
+
+  <!-- Hobbies / Yuki -->
+<section class="popup-window yuki-window" id="hobbiesPopup" data-title="Yuki's Studio" style="--x: 52vw; --y: 25vh;">
+  <header class="popup-header">
+    <span><img src="assets/img/yuki.png" alt="">Yuki's Studio</span>
+
+    <div class="window-controls">
+      <button class="minimize-popup" title="Minimize" aria-label="Minimize"></button>
+      <button class="maximize-popup" title="Maximize" aria-label="Maximize"></button>
+      <button class="close-popup" title="Close" aria-label="Close"></button>
+    </div>
+  </header>
+
+  <div class="popup-content yuki-studio">
+
+    <!-- Yuki header -->
+    <div class="yuki-studio-header">
+      <div class="yuki-studio-avatar">
+        <img src="assets/img/yuki.png" alt="Yuki">
+      </div>
+
+      <div>
+        <span class="eyebrow">YUKI'S STUDIO</span>
+        <h2>Welcome to Yuki's corner.</h2>
+        <p>Pick something mellow to do.</p>
+      </div>
+    </div>
+
+    <!-- Tool buttons -->
+    <div class="yuki-tools">
+
+      <button class="yuki-tool active" data-yuki-tab="quote">
+        <span class="yuki-tool-icon">📖</span>
+        <span>
+          <strong>Daily quote</strong>
+          <small>A little inspiration</small>
+        </span>
+        <b>→</b>
+      </button>
+
+      <button class="yuki-tool" data-yuki-tab="notes">
+        <span class="yuki-tool-icon">📝</span>
+        <span>
+          <strong>To do list</strong>
+          <small>Today's little list</small>
+        </span>
+        <b>→</b>
+      </button>
+
+      <button class="yuki-tool" data-yuki-tab="pomodoro">
+        <span class="yuki-tool-icon">🍅</span>
+        <span>
+          <strong>Pomodoro</strong>
+          <small>Focus with Yuki</small>
+        </span>
+        <b>→</b>
+      </button>
+
+      <button class="yuki-tool" data-yuki-tab="game">
+        <span class="yuki-tool-icon">🧶</span>
+        <span>
+          <strong>Yuki's run</strong>
+          <small>Run, jump &amp; collect yarn</small>
+        </span>
+        <b>→</b>
+      </button>
+
+      <button class="yuki-tool" data-yuki-tab="paint">
+        <span class="yuki-tool-icon">🎨</span>
+        <span>
+          <strong>Paint</strong>
+          <small>Doodle something</small>
+        </span>
+        <b>→</b>
+      </button>
+
+    </div>
+
+    <!-- ==================== -->
+    <!-- DAILY QUOTE -->
+    <!-- ==================== -->
+
+    <div class="yuki-panel active" id="yukiQuotePanel">
+
+      <div class="quote-card">
+
+        <div class="quote-mark">“</div>
+
+        <p id="dailyQuote">
+          Loading a little wisdom...
+        </p>
+
+        <div class="quote-source">
+          <strong id="quoteAuthor">Yuki's bookshelf</strong>
+          <small id="quoteBook"></small>
+        </div>
+
+      </div>
+
+      <button class="xp-button small" id="newQuoteButton">
+        Another one →
+      </button>
+
+    </div>
+
+
+<!-- ==================== -->
+<!-- SUPER YUKI -->
+<!-- ==================== -->
+
+<!-- ==================== -->
+<!-- SUPER YUKI — CONTINUOUS RUNNER -->
+<!-- ==================== -->
+
+<div class="yuki-panel" id="yukiGamePanel">
+
+  <div class="game-heading">
+    <div>
+      <h3>Yuki's Endless Yarn Run</h3>
+    </div>
+
+    <div class="game-stats">
+      <span class="game-stat">
+        ⭐ <b id="yukiScore">0</b>
+      </span>
+
+      <span class="game-stat">
+        🧶 <b id="yukiYarnCount">0</b>
+      </span>
+
+      <span class="game-stat">
+        ❤️ <b id="yukiLives">3</b>
+      </span>
+
+      <span class="game-stat">
+        🏆 <b id="yukiHighScore">0</b>
+      </span>
+    </div>
+  </div>
+
+  <div class="yuki-game" id="yukiGame">
+
+    <div class="game-world" id="gameWorld">
+
+      <div class="game-player" id="gamePlayer">
+        <img src="assets/img/yuki.png" alt="Yuki">
+      </div>
+
+    </div>
+
+    <!-- Game intro -->
+    <div class="yuki-level-overlay" id="yukiStartOverlay">
+
+      <div class="yuki-level-card">
+
+        <h3>Ready, Yuki?</h3>
+
+        <p>
+          Run forever, collect yarn and avoid the little obstacles.
+          How far can you go?
+        </p>
+
+        <button
+          class="xp-button primary"
+          id="startYukiGame"
+          type="button"
+        >
+          Start Running →
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- Game over -->
+    <div
+      class="yuki-level-overlay hidden"
+      id="yukiGameOverOverlay"
+    >
+
+      <div class="yuki-level-card">
+
+        <span class="eyebrow">RUN OVER</span>
+
+        <h3>Yuki needs a nap.</h3>
+
+        <p id="yukiGameOverMessage">
+          Nice run!
+        </p>
+
+        <button
+          class="xp-button primary"
+          id="restartYukiGame"
+          type="button"
+        >
+          Run Again →
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="game-controls">
+
+    <div class="game-help">
+      <span>← → Move</span>
+      <span>Space / ↑ Jump</span>
+      <span>🧶 Collect Yarn</span>
+      <span>🐾 Avoid Obstacles</span>
+    </div>
+
+    <button
+      class="xp-button small"
+      id="restartYuki"
+      type="button"
+    >
+      Restart
+    </button>
+
+  </div>
+
+</div>
+    <!-- ==================== -->
+    <!-- POMODORO -->
+    <!-- ==================== -->
+
+    <div class="yuki-panel" id="yukiPomodoroPanel">
+
+      <div class="pomodoro-card">
+
+        <div class="pomodoro-mode">
+          <button class="pomodoro-mode-button active" data-mode="focus">
+            Focus
+          </button>
+
+          <button class="pomodoro-mode-button" data-mode="short">
+            Short Break
+          </button>
+
+          <button class="pomodoro-mode-button" data-mode="long">
+            Long Break
+          </button>
+        </div>
+
+        <div class="cassette" id="cassette" aria-hidden="true">
+          <span class="reel reel-left"><i></i></span>
+          <span class="tape-window"></span>
+          <span class="reel reel-right"><i></i></span>
+        </div>
+
+        <div class="pomodoro-time" id="pomodoroTime">
+          25:00
+        </div>
+
+        <div class="pomodoro-progress">
+          <div id="pomodoroProgress"></div>
+        </div>
+
+        <div class="pomodoro-controls">
+
+          <button class="xp-button primary" id="pomodoroStart">
+            Start
+          </button>
+
+          <button class="xp-button" id="pomodoroReset">
+            Reset
+          </button>
+
+        </div>
+
+        <div class="pomodoro-settings">
+
+          <label>
+            Focus
+            <select id="focusDuration">
+              <option value="15">15 min</option>
+              <option value="20">20 min</option>
+              <option value="25" selected>25 min</option>
+              <option value="30">30 min</option>
+              <option value="45">45 min</option>
+              <option value="60">60 min</option>
+            </select>
+          </label>
+
+          <label>
+            Short break
+            <select id="shortBreakDuration">
+              <option value="5" selected>5 min</option>
+              <option value="10">10 min</option>
+              <option value="15">15 min</option>
+            </select>
+          </label>
+
+          <label>
+            Long break
+            <select id="longBreakDuration">
+              <option value="15">15 min</option>
+              <option value="20" selected>20 min</option>
+              <option value="30">30 min</option>
+            </select>
+          </label>
+
+        </div>
+
+        <div class="pomodoro-session">
+          Session <b id="pomodoroSession">1</b>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ==================== -->
+    <!-- DAILY NOTES -->
+    <!-- ==================== -->
+
+    <div class="yuki-panel" id="yukiNotesPanel">
+
+      <div class="notes-card">
+
+        <div class="notes-input">
+
+          <input
+            id="noteInput"
+            type="text"
+            placeholder="What needs doing?"
+          >
+
+          <button class="xp-button primary" id="addNote">
+            Add
+          </button>
+
+        </div>
+
+        <div class="notes-list" id="notesList"></div>
+
+        <div class="notes-footer">
+          <span id="notesCount">0 tasks</span>
+
+          <button class="xp-button small" id="clearCompleted">
+            Clear completed
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ==================== -->
+    <!-- PAINT -->
+    <!-- ==================== -->
+
+    <div class="yuki-panel" id="yukiPaintPanel">
+
+      <div class="paint-app">
+
+        <!-- Tool box -->
+        <div class="paint-toolbox" role="toolbar" aria-label="Tools">
+          <button class="paint-tool active" data-paint-tool="pencil" title="Pencil" aria-label="Pencil">✏️</button>
+          <button class="paint-tool" data-paint-tool="brush" title="Brush" aria-label="Brush">🖌️</button>
+          <button class="paint-tool" data-paint-tool="eraser" title="Eraser" aria-label="Eraser">🧽</button>
+          <button class="paint-tool" data-paint-tool="fill" title="Fill with colour" aria-label="Fill with colour">🪣</button>
+          <button class="paint-tool" data-paint-tool="line" title="Line" aria-label="Line">📏</button>
+          <button class="paint-tool" data-paint-tool="rect" title="Rectangle" aria-label="Rectangle">▭</button>
+          <button class="paint-tool" data-paint-tool="ellipse" title="Ellipse" aria-label="Ellipse">◯</button>
+          <button class="paint-tool" data-paint-tool="picker" title="Pick colour" aria-label="Pick colour">💧</button>
+        </div>
+
+        <!-- Canvas -->
+        <div class="paint-canvas-wrap">
+          <canvas id="paintCanvas" width="640" height="420"></canvas>
+        </div>
+
+      </div>
+
+      <!-- Size + colours -->
+      <div class="paint-bottom">
+
+        <div class="paint-sizes" role="radiogroup" aria-label="Brush size">
+          <button class="paint-size active" data-paint-size="2" title="Fine" aria-label="Fine"><i style="height:2px"></i></button>
+          <button class="paint-size" data-paint-size="5" title="Medium" aria-label="Medium"><i style="height:5px"></i></button>
+          <button class="paint-size" data-paint-size="9" title="Thick" aria-label="Thick"><i style="height:9px"></i></button>
+          <button class="paint-size" data-paint-size="14" title="Heavy" aria-label="Heavy"><i style="height:14px"></i></button>
+        </div>
+
+        <div class="paint-current" aria-hidden="true">
+          <span class="paint-swatch-fg" id="paintFg"></span>
+          <span class="paint-swatch-bg" id="paintBg"></span>
+        </div>
+
+        <div class="paint-palette" id="paintPalette" role="toolbar" aria-label="Colour palette"></div>
+
+        <div class="paint-actions">
+          <button class="xp-button small" id="paintUndo">Undo</button>
+          <button class="xp-button small" id="paintClear">Clear</button>
+          <button class="xp-button small" id="paintSave">Download</button>
+        </div>
+
+      </div>
+
+      <p class="paint-hint">
+        Left-click paints with the front colour, right-click paints with the back colour.
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+  <!-- Project -->
+  <section class="popup-window project-window" id="projectPopup" data-title="Case file" style="--x: 16vw; --y: 8vh;">
+    <header class="popup-header">
+      <span><img src="assets/img/portfolio-icon.png" alt=""><span id="projectChrome">Case file</span></span>
+      <div class="window-controls">
+        <button class="minimize-popup" title="Minimize" aria-label="Minimize"></button>
+        <button class="maximize-popup" title="Maximize" aria-label="Maximize"></button>
+        <button class="close-popup" title="Close" aria-label="Close"></button>
+      </div>
+    </header>
+    <div class="popup-content project-content" id="projectBody" tabindex="-1"></div>
+    <footer class="status-bar" id="projectStatus"></footer>
+  </section>
+
+  <!-- Admin -->
+  <section class="popup-window admin-window" id="adminPopup" data-title="Project Manager" style="--x: 12vw; --y: 8vh;">
+    <header class="popup-header">
+      <span><img src="assets/img/portfolio-icon.png" alt="">Project Manager</span>
+      <div class="window-controls">
+        <button class="minimize-popup" title="Minimize" aria-label="Minimize"></button>
+        <button class="maximize-popup" title="Maximize" aria-label="Maximize"></button>
+        <button class="close-popup" title="Close" aria-label="Close"></button>
+      </div>
+    </header>
+
+    <div class="popup-content admin-content">
+
+      <!-- Gate -->
+      <div class="admin-gate" id="adminGate">
+        <h2>Project Manager</h2>
+        <p>Enter the passphrase to manage the case files.</p>
+        <div class="gate-row">
+          <label class="sr-only" for="adminPass">Passphrase</label>
+          <input id="adminPass" type="password" placeholder="Passphrase" autocomplete="current-password">
+          <button class="xp-button primary" id="adminUnlock" type="button">Unlock</button>
+        </div>
+        <p class="gate-note" id="gateNote" role="status" aria-live="polite"></p>
+      </div>
+
+      <!-- Panel -->
+      <div class="admin-panel" id="adminPanel" hidden>
+
+        <div class="admin-cols">
+
+          <!-- Editor -->
+          <div class="admin-editor">
+            <h3 id="editorHeading">Add a project</h3>
+
+            <div class="cell">
+              <label for="pTitle">Title</label>
+              <input id="pTitle" type="text" placeholder="DiData Rebranding">
+            </div>
+
+            <div class="admin-row">
+              <div class="cell">
+                <label for="pCat">Section</label>
+                <select id="pCat">
+                  <option value="branding">Branding</option>
+                  <option value="digital">Digital &amp; Print</option>
+                  <option value="product">Product Design</option>
+                </select>
+              </div>
+              <div class="cell">
+                <label for="pYear">Year</label>
+                <input id="pYear" type="text" placeholder="2024">
+              </div>
+            </div>
+
+            <div class="cell">
+              <label for="pMeta">Discipline line</label>
+              <input id="pMeta" type="text" placeholder="Identity &middot; Health data platform">
+            </div>
+
+            <div class="cell">
+              <label for="pImage">Cover file name</label>
+              <input id="pImage" type="text" placeholder="didata.jpg">
+              <span class="cell-hint">Save the image into <code>assets/img/work/</code> first.</span>
+            </div>
+
+            <div class="cell">
+              <label for="pLink">Link <span class="opt">(optional)</span></label>
+              <input id="pLink" type="url" placeholder="https://...">
+            </div>
+
+            <div class="cell">
+              <label for="pSize">Card size</label>
+              <select id="pSize">
+                <option value="regular">Regular</option>
+                <option value="wide">Wide &mdash; two columns</option>
+                <option value="tall">Tall &mdash; two rows</option>
+                <option value="feature">Feature &mdash; two by two</option>
+              </select>
+            </div>
+
+            <div class="admin-actions">
+              <button class="xp-button primary" id="pSave" type="button">Add project</button>
+              <button class="xp-button" id="pClear" type="button">Clear</button>
+            </div>
+          </div>
+
+          <!-- Preview -->
+          <div class="admin-preview">
+            <h3>Preview</h3>
+            <div class="preview-stage" id="previewStage"></div>
+          </div>
+
+        </div>
+
+        <!-- Current list -->
+        <div class="admin-list-wrap">
+          <h3>Filed projects <span class="admin-count" id="adminCount">0</span></h3>
+          <ul class="admin-list" id="adminList"></ul>
+        </div>
+
+        <!-- Export -->
+        <div class="admin-export">
+          <h3>Publish</h3>
+          <p class="export-note">Changes live in this browser only. To publish them, copy the code below and replace the <code>PROJECTS</code> array near the top of <code>assets/js/main.js</code>.</p>
+          <div class="admin-actions">
+            <button class="xp-button primary" id="adminCopy" type="button">Copy code</button>
+            <button class="xp-button" id="adminDownload" type="button">Download main.js snippet</button>
+            <button class="xp-button" id="adminReset" type="button">Reset to published</button>
+          </div>
+          <textarea id="adminExport" readonly rows="8" aria-label="Generated code"></textarea>
+          <p class="gate-note" id="exportNote" role="status" aria-live="polite"></p>
+        </div>
+
+      </div>
+
+    </div>
+    <footer class="status-bar" id="adminStatus">Locked</footer>
+  </section>
+
+  <!-- Request sent -->
+  <section class="popup-window sent-window" id="sentPopup" data-title="Request sent" style="--x: 32vw; --y: 26vh;">
+    <header class="popup-header">
+      <span><img src="assets/img/work-icon.png" alt="">Request sent</span>
+      <div class="window-controls"><button class="close-popup" title="Close" aria-label="Close"></button></div>
+    </header>
+    <div class="popup-content sent-content">
+      <div class="sent-row">
+        <div class="sent-mark" aria-hidden="true">&#10003;</div>
+        <div>
+          <h2>Your request was sent.</h2>
+          <p id="sentSummary">Thank you &mdash; it&rsquo;s landed in my inbox.</p>
+        </div>
+      </div>
+      <p class="sent-note">I usually reply within a couple of days. If it&rsquo;s urgent, email me directly at <a href="mailto:ouaras.yassmine@gmail.com">ouaras.yassmine@gmail.com</a>.</p>
+      <div class="sent-actions">
+        <button class="xp-button primary close-popup" type="button">OK</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Start Menu -->
+  <section class="popup-window start-menu" id="menuPopup" data-title="Start" style="--x: 8px; --y: auto;">
+
+    <div class="start-profile">
+      <div class="pixel-avatar small-avatar">
+        <img src="assets/img/logo.png" alt="">
+      </div>
+      <b>Ouaras Yassmine</b>
+    </div>
+
+    <div class="start-body">
+
+      <!-- Portrait column -->
+      <div class="start-portrait">
+        <img class="start-figure" src="assets/img/yassmine-pixel.png"
+             alt="Pixel illustration of Yassmine">
+        <button class="start-allprograms" id="allProgramsButton"
+                aria-haspopup="true" aria-expanded="false" aria-controls="allPrograms">
+          <span>All Programs</span>
+          <b aria-hidden="true">&#9654;</b>
+        </button>
+      </div>
+
+      <!-- Menu column -->
+      <div class="start-links">
+        <button class="open-popup" data-target="portfolioPopup"><img src="assets/img/portfolio-icon.png" alt=""><span>Portfolio</span></button>
+        <button class="open-popup" data-target="aboutPopup"><img src="assets/img/community-icon.png" alt=""><span>About Me</span></button>
+        <button class="open-popup" data-target="hirePopup"><img src="assets/img/work-icon.png" alt=""><span>Work with Me</span></button>
+        <button class="open-popup" data-target="hobbiesPopup"><img src="assets/img/yuki.png" alt=""><span>Yuki&rsquo;s Studio</span></button>
+      </div>
+
+    </div>
+
+    <div class="start-footer" aria-hidden="true"></div>
+  </section>
+
+
+
+
+  <!-- All Programs -->
+  <div class="start-flyout" id="allPrograms" role="menu" aria-label="All programs">
+    <button role="menuitem" class="open-popup" data-target="portfolioPopup"><img src="assets/img/portfolio-icon.png" alt=""><span>Portfolio</span></button>
+    <button role="menuitem" class="open-popup" data-target="aboutPopup"><img src="assets/img/community-icon.png" alt=""><span>About Me</span></button>
+    <button role="menuitem" class="open-popup" data-target="hirePopup"><img src="assets/img/work-icon.png" alt=""><span>Work with Me</span></button>
+    <button role="menuitem" class="has-sub" id="studioSubButton"
+            aria-haspopup="true" aria-expanded="false" aria-controls="studioSub">
+      <img src="assets/img/yuki.png" alt="">
+      <span>Yuki&rsquo;s Studio</span>
+      <b class="sub-arrow" aria-hidden="true">&#9654;</b>
+    </button>
+  </div>
+
+  <!-- Yuki's Studio submenu -->
+  <div class="start-flyout start-subflyout" id="studioSub" role="menu" aria-label="Yuki's Studio">
+    <button role="menuitem" data-yuki-open="quote"><span class="emoji-icon">&#128214;</span><span>Daily quote</span></button>
+    <button role="menuitem" data-yuki-open="notes"><span class="emoji-icon">&#128221;</span><span>To do list</span></button>
+    <button role="menuitem" data-yuki-open="pomodoro"><span class="emoji-icon">&#127813;</span><span>Pomodoro</span></button>
+    <button role="menuitem" data-yuki-open="game"><span class="emoji-icon">&#129525;</span><span>Yuki&rsquo;s run</span></button>
+    <button role="menuitem" data-yuki-open="paint"><span class="emoji-icon">&#127912;</span><span>Paint</span></button>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

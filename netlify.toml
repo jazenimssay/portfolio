@@ -1,0 +1,12 @@
+# Netlify configuration
+# The site is plain static files, so there is nothing to build.
+
+[build]
+  publish = "."
+  command = ""
+
+# Keep the content manager out of search results
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
