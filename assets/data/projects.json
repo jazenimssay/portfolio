@@ -3,7 +3,7 @@
     {
       "size": "regular",
       "no": "001",
-      "body": "## The problem\n\nDiData's existing identity didn't match the seriousness of what the product did. Researchers were being asked to trust it with patient registries and biological sample data, and the brand looked like a generic SaaS startup.\n\n## What I did\n\nRebuilt the identity from the mark outward, then carried it into a modular design system in Figma so the product and marketing stayed consistent without anyone policing it.\n\n* New logo and full graphic charter\n* Modular UI kit covering the product surface\n* 80+ decks, pages and campaign assets built on it\n\n## The result\n\nOne visual language across product, marketing and sales, and a system the team could extend on their own.\n\n![](assets/img/work/brand-identity-didata-01.jpg \"new brand identity\")",
+      "body": "## The problem\n\nDiData's existing identity didn't match the seriousness of what the product did. Researchers were being asked to trust it with patient registries and biological sample data, and the brand looked like a generic SaaS startup.\n\n## What I did\n\nRebuilt the identity from the mark outward, then carried it into a modular design system in Figma so the product and marketing stayed consistent without anyone policing it.\n\n* New logo and full graphic charter\n* Modular UI kit covering the product surface\n* 80+ decks, pages and campaign assets built on it\n\n## The result\n\nOne visual language across product, marketing and sales, and a system the team could extend on their own.",
       "meta": "Identity · Health data platform",
       "summary": "A biobanking platform that needed to feel trustworthy to researchers handling sensitive patient data.",
       "client": "DiData",
