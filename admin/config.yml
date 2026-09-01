@@ -24,7 +24,7 @@ collections:
             label: "Projects"
             label_singular: "Project"
             widget: "list"
-            summary: "{{fields.no}} — {{fields.title}}"
+            summary: "{{fields.no}}, {{fields.title}}"
             collapsed: true
             fields:
 
@@ -38,6 +38,7 @@ collections:
                   - { label: "Digital & Print", value: "digital" }
                   - { label: "Product Design",  value: "product" }
               - { name: "no",   label: "Case number", widget: "string", hint: "Three digits, e.g. 006" }
+              - { name: "slug", label: "Link name", widget: "string", required: false, hint: "Used in the shareable address, e.g. didata-rebranding. Lower case, hyphens, no spaces." }
               - { name: "year", label: "Year", widget: "string", required: false }
               - { name: "meta", label: "Discipline line", widget: "string", hint: "Shown on the card, e.g. Identity · Cinema" }
               - name: "image"
@@ -45,15 +46,17 @@ collections:
                 widget: "image"
                 required: false
                 hint: "Landscape works best."
+              - { name: "outcome", label: "Result line", widget: "string", required: false, hint: "One line on what changed. Shows on the card, this is what recruiters scan for." }
+              - { name: "featured", label: "Feature this project", widget: "boolean", default: false, required: false, hint: "Featured projects lead the drawer." }
               - name: "size"
                 label: "Card size"
                 widget: "select"
                 default: "regular"
                 options:
                   - { label: "Regular",              value: "regular" }
-                  - { label: "Wide — two columns",   value: "wide" }
-                  - { label: "Tall — two rows",      value: "tall" }
-                  - { label: "Feature — two by two", value: "feature" }
+                  - { label: "Wide, two columns",   value: "wide" }
+                  - { label: "Tall, two rows",      value: "tall" }
+                  - { label: "Feature, two by two", value: "feature" }
 
               # --- Case study page ---
               - { name: "summary",  label: "Short summary", widget: "text", required: false, hint: "One or two sentences, shown at the top of the project page." }
@@ -64,14 +67,62 @@ collections:
                 label: "The write-up"
                 widget: "markdown"
                 required: false
-                hint: "Headings, paragraphs, lists, quotes and images. Use the toolbar — no code needed."
+                hint: "Headings, paragraphs, lists, quotes and images. Use the toolbar, no code needed."
+              - name: "galleryColumns"
+                label: "Gallery layout"
+                widget: "select"
+                default: "2"
+                required: false
+                options:
+                  - { label: "One per row, full width", value: "1" }
+                  - { label: "Two per row",              value: "2" }
+                  - { label: "Three per row",            value: "3" }
               - name: "gallery"
                 label: "Image gallery"
                 widget: "list"
                 required: false
                 summary: "{{fields.caption}}"
+                hint: "Add as many as you like. In the image picker you can select several files at once, then upload them together."
                 fields:
-                  - { name: "src",     label: "Image",   widget: "image" }
+                  - name: "src"
+                    label: "Image"
+                    widget: "image"
+                    media_library:
+                      config:
+                        multiple: true
                   - { name: "caption", label: "Caption", widget: "string", required: false }
+              - name: "files"
+                label: "Downloads"
+                widget: "list"
+                required: false
+                summary: "{{fields.label}}"
+                hint: "Attach a PDF, deck or brand sheet. Shown as a download list on the project page."
+                fields:
+                  - { name: "file",  label: "File",  widget: "file" }
+                  - { name: "label", label: "Label", widget: "string", hint: "e.g. Full case study (PDF)" }
 
-              - { name: "link", label: "External link", widget: "string", required: false, hint: "Optional — adds a button on the project page." }
+              - { name: "link", label: "External link", widget: "string", required: false, hint: "Optional, adds a button on the project page." }
+
+  - name: "about"
+    label: "About"
+    files:
+      - name: "tools"
+        label: "Tools I use"
+        file: "assets/data/tools.json"
+        description: "The three columns in the Toolkit chapter. Add, remove and reorder freely."
+        fields:
+          - name: "columns"
+            label: "Columns"
+            label_singular: "Column"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { name: "name", label: "Column name", widget: "string", hint: "e.g. Advanced, Intermediate, Learning" }
+              - name: "tools"
+                label: "Tools"
+                label_singular: "Tool"
+                widget: "list"
+                summary: "{{fields.name}}"
+                fields:
+                  - { name: "name", label: "Tool name", widget: "string" }
+                  - { name: "logo", label: "Logo", widget: "image", required: false, hint: "Optional. Without one, a coloured letter tile is used." }
