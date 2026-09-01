@@ -3,8 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#245edb" />
-  <title>Yassmine OS — Portfolio</title>
+  <meta name="theme-color" content="#8b8da6" />
+  <title>Ouaras Yassmine | Product Designer</title>
+
+  <meta name="description" content="Product designer with 5+ years across UI, UX, research and branding. I design for the moment someone hesitates. Biobanking software, crowdfunding platforms, brand systems." />
+
+  <!-- Preview card shown when the link is shared -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ouaras Yassmine | Product Designer" />
+  <meta property="og:description" content="I like turning complicated ideas into things people instantly understand. Product design, UX research and brand systems." />
+  <meta property="og:image" content="assets/img/work/didata.jpg" />
+  <meta property="og:image:alt" content="Selected work by Ouaras Yassmine" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ouaras Yassmine | Product Designer" />
+  <meta name="twitter:description" content="I like turning complicated ideas into things people instantly understand." />
+  <meta name="twitter:image" content="assets/img/work/didata.jpg" />
   <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
@@ -120,7 +134,23 @@
         <button class="divider-tab" role="tab" aria-selected="false" data-filter="product">Product Design</button>
       </div>
 
-      <div class="case-drawer" id="caseDrawer"></div>
+      <div class="case-cabinet">
+
+        <div class="case-sort">
+          <label for="caseSort">Sort by</label>
+          <select id="caseSort">
+            <option value="date-desc">Newest first</option>
+            <option value="date-asc">Oldest first</option>
+            <option value="name-asc">Name A to Z</option>
+            <option value="name-desc">Name Z to A</option>
+            <option value="type">Type</option>
+          </select>
+          <span class="case-count" id="caseCount"></span>
+        </div>
+
+        <div class="case-drawer" id="caseDrawer"></div>
+
+      </div>
 
     </div>
     <footer class="status-bar" id="caseStatus">5 file(s)</footer>
@@ -136,23 +166,14 @@
 
       <!-- Reader card -->
       <div class="library-header">
-        <div class="reader-avatar">
-          <img src="assets/img/logo.png" alt="">
-        </div>
         <div class="reader-meta">
           <h2>Ouaras Nouara El Yassmine</h2>
-          <p>Product Designer &middot; Algiers</p>
-        </div>
-        <div class="reading-progress">
-          <span class="progress-label"><b id="chaptersRead">1</b> of 6 chapters opened</span>
-          <div class="progress-track"><i id="progressFill" style="width:16.6%"></i></div>
+          <p>Product Designer</p>
         </div>
       </div>
 
       <!-- Shelf -->
       <div class="shelf-wrap">
-
-        <!-- Fairy lights -->
         <div class="fairy-lights" aria-hidden="true">
           <svg class="fairy-wire" viewBox="0 0 100 20" preserveAspectRatio="none">
             <path vector-effect="non-scaling-stroke"
@@ -169,7 +190,6 @@
           <i style="--x:96%; --t:4.4s; --d:-0.4s"></i>
         </div>
 
-        <!-- Golden motes -->
         <div class="shelf-motes" aria-hidden="true">
           <span style="--x:11%; --d:0s;   --t:21s; --s:3px"></span>
           <span style="--x:23%; --d:-6s;  --t:26s; --s:2px"></span>
@@ -180,7 +200,6 @@
           <span style="--x:88%; --d:-18s; --t:25s; --s:3px"></span>
         </div>
 
-        <!-- Trailing ivy -->
         <svg class="shelf-ivy" viewBox="0 0 120 150" aria-hidden="true">
           <path class="ivy-stem" d="M8,0 C14,26 4,44 12,66 C20,88 8,104 16,130" />
           <g class="ivy-leaves">
@@ -195,48 +214,40 @@
         </svg>
 
         <div class="shelf">
-
           <div class="shelf-books" role="tablist" aria-label="Chapters">
 
             <button class="book active" data-book="origin" style="--spine:#c0765a; --h:100%; --w:52px"
                     role="tab" aria-selected="true" aria-controls="bookOrigin">
               <span class="book-title">The Origin Story</span>
-              <span class="book-mark">&#10022;</span>
             </button>
 
             <button class="book" data-book="work" style="--spine:#6d8f91; --h:97%; --w:40px"
                     role="tab" aria-selected="false" aria-controls="bookWork">
-              <span class="book-title">Where I&rsquo;ve Worked</span>
-              <span class="book-mark">&#10023;</span>
+              <span class="book-title">Where Ive Worked</span>
             </button>
 
             <button class="book" data-book="toolkit" style="--spine:#849a6f; --h:98%; --w:58px"
                     role="tab" aria-selected="false" aria-controls="bookToolkit">
               <span class="book-title">The Toolkit</span>
-              <span class="book-mark">&#10086;</span>
             </button>
 
             <button class="book" data-book="quests" style="--spine:#c99b52; --h:95%; --w:38px"
                     role="tab" aria-selected="false" aria-controls="bookQuests">
               <span class="book-title">Notable Quests</span>
-              <span class="book-mark">&#9790;</span>
             </button>
 
             <button class="book" data-book="margins" style="--spine:#94789e; --h:96%; --w:48px"
                     role="tab" aria-selected="false" aria-controls="bookMargins">
               <span class="book-title">Notes in the Margins</span>
-              <span class="book-mark">&#10087;</span>
             </button>
 
             <button class="book" data-book="letter" style="--spine:#bd7f80; --h:93%; --w:42px; --lean:7deg"
                     role="tab" aria-selected="false" aria-controls="bookLetter">
               <span class="book-title">Write to Me</span>
-              <span class="book-mark">&#10047;</span>
             </button>
 
           </div>
 
-          <!-- Potted plant -->
           <svg class="shelf-pot" viewBox="0 0 54 74" aria-hidden="true">
             <g class="pot-foliage">
               <ellipse cx="27" cy="20" rx="11" ry="7.5" transform="rotate(-14 27 20)" />
@@ -261,32 +272,72 @@
           <span class="page-chapter">Chapter I</span>
           <h3>The Origin Story</h3>
 
-          <aside class="margin-note">this is the whole job, really</aside>
+          <p class="page-drop">I&rsquo;ve always been the kind of person who looks at something and thinks, I could probably make this myself.</p>
 
-          <p class="page-drop">I like turning complicated ideas into things people instantly understand.</p>
+          <p class="has-dropcap">I started with graphic design, fascinated by visuals and the craft of making things. Then came a deeper curiosity about the people on the other side of the screen. Why do we behave the way we do? What makes an experience feel intuitive? What makes people connect with something?</p>
 
-          <p class="has-dropcap">That has taken me where a wrong click has consequences. A biobanking app, where badly logged data can invalidate research. A crowdfunding platform, where strangers decide whether to trust a startup with their money. Complexity isn&rsquo;t the problem in either case &mdash; unexplained complexity is.</p>
+          <p>That curiosity led me from psychology and human nature into UX research and product design, where understanding people became part of how I work.</p>
+
+          <p>At some point I just needed a place to put all of it. A portfolio to display the work, the experience, and all the hours that went into getting here.</p>
+
+          <p>So began the quest for the perfect portfolio.</p>
+
+          <p>First came Behance, which just didn&rsquo;t do it for me. Then Notion, which, kudos, was almost there. Then I fell further down the rabbit hole into Framer, and alas, Webflow.</p>
+
+          <p>At that point I figured I might as well learn some front-end and build the thing from scratch. Two birds, one stone: I could make my portfolio exactly how I imagined it, while learning enough to understand developers better and make handoffs a little easier.</p>
+
+          <p>So I learned HTML and CSS, and then realised backend was probably next, but decided vibe coding could take care of that part for now. That&rsquo;s a quest for another day.</p>
+
+          <p>And here we are. Today I&rsquo;m somewhere between designer, researcher, problem-solver and explorer. I enjoy turning complicated concepts into something simple that anyone can understand, and occasionally going far deeper down a rabbit hole than necessary.</p>
+
+          <p class="page-note">Curiosity, craft, and a slightly unreasonable number of side quests. That&rsquo;s pretty much my origin story.</p>
         </article>
 
         <article class="book-page" id="bookWork" role="tabpanel">
           <span class="page-chapter">Chapter II</span>
           <h3>Where I&rsquo;ve Worked</h3>
-          <aside class="margin-note">80+ decks. I counted.</aside>
+
           <ul class="timeline">
             <li>
               <b>Graphic &amp; Product Designer</b>
-              <small>Freelance &middot; 2022 &ndash; present</small>
-              <p>Redesigned the Confirmoo site and web app, built Yinvesti from research through final UI, and shaped brand identities for a string of startups. Also mentored a designer from zero to their first role.</p>
+              <small>Freelance &middot; 2022 to present</small>
+              <ul>
+                <li>Redesigned and iterated on the Confirmoo website and web app, improving clarity, usability and flow over time.</li>
+                <li>Designed Yinvesti, a crowdfunding platform connecting investors and startups, translating user needs into intuitive UX flows and a clean, accessible UI.</li>
+                <li>Created brand identities for multiple startups, building visual systems that helped each brand launch with stronger clarity and consistency.</li>
+                <li>Led UX research on travel booking platforms and developed an all-in-one app with a community feature shaped by user insights.</li>
+                <li>Delivered print and social media assets for clients across tech, travel, food and education.</li>
+                <li>Mentored an aspiring designer from the ground up, helping them build a portfolio and land their first graphic design role.</li>
+              </ul>
             </li>
+
             <li>
+              <aside class="margin-note">80+ decks, pages and campaigns. I counted.</aside>
               <b>Lead Graphic &amp; Product Designer</b>
-              <small>DiData &middot; 2023 &ndash; 2025</small>
-              <p>Built a scalable UI kit and modular design framework in Figma, led the website redesign, refined the visual identity, and produced 80+ decks and campaigns with product, engineering and marketing.</p>
+              <small>DiData &middot; 2023 to 2025</small>
+              <ul>
+                <li>Built a scalable UI kit and modular design framework in Figma, aligning the product with brand guidelines and improving interface consistency.</li>
+                <li>Led the redesign of DiData&rsquo;s website, improving navigation, clarity and user experience.</li>
+                <li>Established 80+ slide decks, infographics, print materials and social media assets, in collaboration with product, engineering and marketing.</li>
+                <li>Refined the brand&rsquo;s visual identity, including logo updates and a full graphic charter.</li>
+                <li>Prioritised user-centered design across all projects, aligning visuals with business goals.</li>
+              </ul>
             </li>
+
             <li>
               <b>Graphic Designer</b>
-              <small>Glinted &middot; 2022 &ndash; 2023</small>
-              <p>Social and print work for two in-house brands, plus event materials &mdash; and a seat in the strategy sessions behind two major campaigns.</p>
+              <small>Glinted &middot; 2022 to 2023</small>
+              <ul>
+                <li>Designed social media visuals for two in-house brands, strengthening brand awareness and engagement.</li>
+                <li>Created print materials for professional events, improving presentation at booths and activations.</li>
+                <li>Took part in team strategy sessions and contributed ideas that shaped two major marketing campaigns.</li>
+              </ul>
+            </li>
+
+            <li class="timeline-earlier">
+              <b>Before that</b>
+              <small>2018 to 2022</small>
+              <p>I&rsquo;ve worked graphic design roles both as an intern in a small marketing agency and through volunteering in multiple organisations, national and international: Creativum, Mental Health Talks and AIESEC.</p>
             </li>
           </ul>
         </article>
@@ -294,24 +345,16 @@
         <article class="book-page" id="bookToolkit" role="tabpanel">
           <span class="page-chapter">Chapter III</span>
           <h3>The Toolkit</h3>
-          <aside class="margin-note">the site you&rsquo;re on is the homework</aside>
 
-          <h4>Design</h4>
+          <h4>Skills</h4>
           <div class="chips">
             <span>Product Design</span><span>UI Design</span><span>UX Design</span>
             <span>User Research</span><span>Wireframing</span><span>Prototyping</span>
             <span>Design Systems</span><span>Brand Identity</span><span>Visual Design</span>
           </div>
 
-          <h4>Software</h4>
-          <div class="chips">
-            <span>Figma</span><span>Illustrator</span><span>Photoshop</span><span>Adobe CC</span>
-          </div>
-
-          <h4>Learning</h4>
-          <div class="chips">
-            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git</span>
-          </div>
+          <h4>Tools I use</h4>
+          <div class="tool-board" id="toolBoard"></div>
 
           <h4>Languages</h4>
           <ul class="langs">
@@ -324,45 +367,53 @@
         <article class="book-page" id="bookQuests" role="tabpanel">
           <span class="page-chapter">Chapter IV</span>
           <h3>Notable Quests</h3>
-          <aside class="margin-note">hardest brief I&rsquo;ve had &mdash; and my favourite</aside>
+
+          <aside class="margin-note">Hardest software and field I&rsquo;ve ever had to understand, and my favourite to conquer.</aside>
+
           <div class="quest">
             <b>Redesigned a biobanking platform</b>
-            <p>Led a critical redesign of DiData&rsquo;s biobanking software with a modular, user-centered approach &mdash; making genuinely complex tasks navigable.</p>
+            <p>Led a critical redesign of DiData&rsquo;s biobanking software with a modular, user-centered approach, making genuinely complex tasks navigable.</p>
           </div>
           <div class="quest">
             <b>Built a crowdfunding platform</b>
-            <p>Designed Yinvesti end to end, connecting investors with startups &mdash; UX research through to final UI.</p>
+            <p>Designed Yinvesti end to end, balancing user needs and client goals while working within strict financial regulations and legal constraints.</p>
           </div>
           <div class="quest">
-            <b>Cross-channel brand systems</b>
-            <p>Cohesive visuals across social, web and print for brands in travel, health, tech and education.</p>
+            <b>A career of side quests</b>
+            <p>From startup identities and digital products to media campaigns and print, I&rsquo;ve designed across a multitude of industries and mediums. Freelancing taught me to adapt my design process to whatever problem landed on my desk.</p>
           </div>
         </article>
 
         <article class="book-page" id="bookMargins" role="tabpanel">
           <span class="page-chapter">Chapter V</span>
           <h3>Notes in the Margins</h3>
-          <aside class="margin-note">ask me about the reading list</aside>
-          <p class="page-drop">The things that aren&rsquo;t on the CV but show up in the work anyway.</p>
+
+          <aside class="margin-note">Don&rsquo;t ask me about the reading list.</aside>
+
+          <p class="page-drop">The things that aren&rsquo;t on the CV but show up in my work anyway.</p>
+
           <div class="quest">
-            <b>Psychology &amp; human behaviour</b>
-            <p>Why people hesitate, misread a label, or abandon a flow halfway. Empathy is a design tool, not a soft skill.</p>
+            <b>I ask why a lot</b>
+            <p>Not in the annoying way. I just have a hard time accepting &ldquo;that&rsquo;s how it&rsquo;s done&rdquo; as an answer. I like getting to the reason behind a decision, whether it&rsquo;s a user behaviour, a design choice or a business constraint. Though I tend to be self-reserved, it has yet to stop me from asking.</p>
           </div>
+
           <div class="quest">
-            <b>Stubborn problem-solving</b>
-            <p>Naturally driven to figure things out alone &mdash; stubborn in the best way when it comes to turning a vision into a real thing.</p>
+            <aside class="margin-note note-inline">Don&rsquo;t worry, I do ask for help when I know it would save unnecessary time and energy.</aside>
+            <b>I&rsquo;m weirdly self-sufficient</b>
+            <p>Give me a problem and I&rsquo;ll usually try to solve it before asking for help. Sometimes that means figuring out a new tool, digging through documentation, or going down an unnecessarily deep Google rabbit hole. It also means I&rsquo;m comfortable being thrown into unfamiliar territory and finding my way around.</p>
           </div>
+
           <div class="quest">
-            <b>Reading, constantly</b>
-            <p>Hence the shelf. Books are where most of the interesting ideas come from, and where I go when a problem won&rsquo;t budge.</p>
+            <b>I&rsquo;m good at connecting dots</b>
+            <p>I tend to pull ideas from completely different places and see what happens when they meet. Psychology influences how I think about UX. Craft influences how I approach visual work. Branding influences how I think about products. Random things I learn for fun somehow end up being useful six months later.</p>
           </div>
         </article>
 
         <article class="book-page" id="bookLetter" role="tabpanel">
           <span class="page-chapter">Chapter VI</span>
           <h3>Write to Me</h3>
-          <aside class="margin-note">I reply faster than you&rsquo;d think</aside>
-          <p class="page-drop">Got something complicated that needs making clear? Let&rsquo;s talk.</p>
+
+          <p class="page-drop">Got an interesting problem, or an idea that needs making? Let&rsquo;s talk. I&rsquo;m always curious to see where a good conversation goes.</p>
 
           <div class="library-card">
             <div class="card-head">
@@ -372,10 +423,12 @@
             <ul class="card-rows">
               <li><span>Email</span><a href="mailto:ouaras.yassmine@gmail.com">ouaras.yassmine@gmail.com</a></li>
               <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/yassmine-ouaras/" target="_blank" rel="noopener">/in/yassmine-ouaras</a></li>
-              <li><span>Portfolio</span><a href="https://ouaras-yassmine-portfolio.notion.site/Hi-I-m-Yassmine-1af8509314388043adb9c99d9ff3be45" target="_blank" rel="noopener">Full case studies</a></li>
-              <li><span>Based in</span><span>Algiers &middot; open to remote</span></li>
+              <li><span>Portfolio</span><button type="button" class="card-link open-popup" data-target="portfolioPopup">Open my work</button></li>
+              <li><span>My resume</span><a href="assets/files/ouaras-yassmine-cv.pdf" download>Download CV (PDF)</a></li>
             </ul>
-            <div class="card-stamp">AVAILABLE<br><small>for new projects</small></div>
+            <span class="card-cat" aria-hidden="true">
+              <svg viewBox="0 0 40 30"><path d="M6,28 C4,20 5,12 9,7 L12,13 C15,11 25,11 28,13 L31,7 C35,12 36,20 34,28 Z"/><circle class="eye" cx="15" cy="19" r="1.6"/><circle class="eye" cx="25" cy="19" r="1.6"/></svg>
+            </span>
           </div>
 
           <div class="letter-actions">
@@ -394,7 +447,12 @@
       <span><img src="assets/img/work-icon.png" alt="">Work with Me</span>
       <div class="window-controls"><button class="minimize-popup" title="Minimize" aria-label="Minimize"></button><button class="maximize-popup" title="Maximize" aria-label="Maximize"></button><button class="close-popup" title="Close" aria-label="Close"></button></div>
     </header>
-    <form class="popup-content hire-form" data-endpoint="" novalidate>
+    <form class="popup-content hire-form" name="project-request" method="POST"
+          data-netlify="true" netlify-honeypot="bot-field" data-endpoint="" novalidate>
+      <input type="hidden" name="form-name" value="project-request">
+      <p class="sr-only" aria-hidden="true">
+        <label>Leave this empty <input name="bot-field"></label>
+      </p>
 
       <h2 class="hire-title">What can I make for you?</h2>
 
@@ -422,7 +480,7 @@
 
         <div class="cell cell-service">
           <label for="hireService">You need</label>
-          <select id="hireService" name="service" required data-hint="Pick the closest fit — we can refine it later.">
+          <select id="hireService" name="service" required data-hint="Pick the closest fit, we can refine it later.">
             <option value="">Choose a service...</option>
             <option>Branding / Logo</option>
             <option>Product Design</option>
@@ -480,7 +538,6 @@
       </div>
 
       <div>
-        <span class="eyebrow">YUKI'S STUDIO</span>
         <h2>Welcome to Yuki's corner.</h2>
         <p>Pick something mellow to do.</p>
       </div>
@@ -569,7 +626,7 @@
 <!-- ==================== -->
 
 <!-- ==================== -->
-<!-- SUPER YUKI — CONTINUOUS RUNNER -->
+<!-- YUKI RUN -->
 <!-- ==================== -->
 
 <div class="yuki-panel" id="yukiGamePanel">
@@ -599,6 +656,13 @@
   </div>
 
   <div class="yuki-game" id="yukiGame">
+
+    <div class="touch-pad" id="touchPad" aria-hidden="true">
+      <button type="button" class="touch-btn touch-left" data-move="left" aria-label="Move left">&#9664;</button>
+      <button type="button" class="touch-btn touch-right" data-move="right" aria-label="Move right">&#9654;</button>
+      <button type="button" class="touch-btn touch-jump" data-move="jump" aria-label="Jump">JUMP</button>
+    </div>
+
 
     <div class="game-world" id="gameWorld">
 
@@ -1083,6 +1147,19 @@
     <button role="menuitem" data-yuki-open="pomodoro"><span class="emoji-icon">&#127813;</span><span>Pomodoro</span></button>
     <button role="menuitem" data-yuki-open="game"><span class="emoji-icon">&#129525;</span><span>Yuki&rsquo;s run</span></button>
     <button role="menuitem" data-yuki-open="paint"><span class="emoji-icon">&#127912;</span><span>Paint</span></button>
+  </div>
+
+
+  <!-- Image viewer -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close viewer">&times;</button>
+    <button class="lightbox-prev" id="lightboxPrev" type="button" aria-label="Previous image">&#10094;</button>
+    <figure class="lightbox-stage">
+      <img id="lightboxImage" src="" alt="">
+      <figcaption id="lightboxCaption"></figcaption>
+    </figure>
+    <button class="lightbox-next" id="lightboxNext" type="button" aria-label="Next image">&#10095;</button>
+    <span class="lightbox-count" id="lightboxCount"></span>
   </div>
 
   <script src="assets/js/main.js"></script>
