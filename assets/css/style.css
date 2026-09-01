@@ -1137,7 +1137,7 @@ button { cursor: pointer; }
   font-size: 1.05em;
 }
 
-/* Typography — Windows XP uses Tahoma system-wide, Trebuchet MS for title bar captions */
+/* Typography, Windows XP uses Tahoma system-wide, Trebuchet MS for title bar captions */
 .hero-copy h1,
 .hero-role,
 .window-intro h2,
@@ -1338,7 +1338,7 @@ button { cursor: pointer; }
 }
 
 /* =========================================
-   SUPER YUKI — CONTINUOUS RUNNER
+   SUPER YUKI, CONTINUOUS RUNNER
    ========================================= */
 
 .game-heading {
@@ -2113,7 +2113,7 @@ button { cursor: pointer; }
 }
 
 /* =========================================================
-   XP SILVER TASKBAR — YASSMINE SHELL OVERRIDES
+   XP SILVER TASKBAR, YASSMINE SHELL OVERRIDES
    No tray overflow arrow, no separator after Start.
    Sound + clock are always visible.
    ========================================================= */
@@ -2472,7 +2472,7 @@ button { cursor: pointer; }
 
 
 /* =========================================================
-   WINDOWS XP SILVER — COMPLETE CONTROL LANGUAGE
+   WINDOWS XP SILVER, COMPLETE CONTROL LANGUAGE
    RetroBar Silver palette + classic XP common-control behavior.
    ========================================================= */
 
@@ -2837,7 +2837,7 @@ progress::-webkit-progress-value {
   overflow-y: auto;
 }
 
-/* Left pane: pinned sections, larger icons — like XP's "frequently used programs" */
+/* Left pane: pinned sections, larger icons, like XP's "frequently used programs" */
 .start-links-left {
   flex: 1;
   min-width: 0;
@@ -2845,7 +2845,7 @@ progress::-webkit-progress-value {
   background: #fff;
 }
 
-/* Right pane: secondary links, tinted panel — like XP's "My Documents / My Computer" column */
+/* Right pane: secondary links, tinted panel, like XP's "My Documents / My Computer" column */
 .start-links-right {
   width: 152px;
   flex-shrink: 0;
@@ -3135,7 +3135,7 @@ input[type="radio"] {
 
 
 /* =========================================================
-   WINDOW CHROME — LUNA SILVER
+   WINDOW CHROME, LUNA SILVER
    Single source of truth. Structure follows the reference
    build; palette is Luna Silver, which is a LIGHT scheme,
    so caption text is dark rather than white.
@@ -3419,7 +3419,7 @@ input[type="radio"] {
 }
 
 /* =========================================================
-   SCROLLBARS — LUNA SILVER
+   SCROLLBARS, LUNA SILVER
    XP scrollbars are 17px, with arrow buttons at both ends,
    a recessed track, and a raised thumb carrying three
    gripper ridges in the middle.
@@ -3565,7 +3565,7 @@ input[type="radio"] {
 }
 
 /* =========================================================
-   YUKI STUDIO — DEPTH, TABS, PAINT
+   YUKI STUDIO, DEPTH, TABS, PAINT
    Title strip, tab row and content pane are visually
    distinct, in the XP tab-control idiom.
    ========================================================= */
@@ -3968,7 +3968,7 @@ input[type="radio"] {
 }
 
 /* =========================================================
-   ABOUT — THE BOOKSHELF
+   ABOUT, THE BOOKSHELF
    Chapters live on a shelf; clicking a spine opens a page.
    ========================================================= */
 
@@ -4328,7 +4328,7 @@ input[type="radio"] {
 }
 
 /* =========================================================
-   BOOKSHELF — READING FURNITURE
+   BOOKSHELF, READING FURNITURE
    Progress tracker, marginalia, shelf life, library card.
    ========================================================= */
 
@@ -4570,7 +4570,7 @@ input[type="radio"] {
 }
 
 /* =========================================================
-   BOOKSHELF — COSY DAYTIME NOOK
+   BOOKSHELF, COSY DAYTIME NOOK
    Softer books with cloth bands and gold marks, fairy
    lights strung above, ivy and a pot, drifting motes.
    Transitions are eased rather than animated.
@@ -4878,7 +4878,7 @@ input[type="radio"] {
 }
 
 /* =========================================================
-   BOOKSHELF — SPINE WIDTHS
+   BOOKSHELF, SPINE WIDTHS
    Spines are narrow and uneven, like a real shelf, rather
    than stretching to fill the row. The last one leans into
    the gap; the pot anchors the far end.
@@ -4961,7 +4961,7 @@ input[type="radio"] {
 
 
 /* =========================================================
-   PROJECT FORM — GREY BENTO
+   PROJECT FORM, GREY BENTO
    Raised grey tiles on grey chrome, one sunken field each.
    Body text held at 14px minimum; inputs at 16px so iOS
    doesn't zoom the page when a field takes focus.
@@ -5169,7 +5169,7 @@ input[type="radio"] {
 }
 
 /* =========================================================
-   REQUEST SENT — CONFIRMATION DIALOG
+   REQUEST SENT, CONFIRMATION DIALOG
    ========================================================= */
 
 .sent-window {
@@ -5249,7 +5249,7 @@ input[type="radio"] {
 }
 
 /* =========================================================
-   FORM — DITHER TEXTURE AND STATUS BAR
+   FORM, DITHER TEXTURE AND STATUS BAR
    Old UIs faked shading with a 1px checkerboard of two
    greys. A faint version of that reads as period-correct
    surface rather than a flat modern fill.
@@ -5304,7 +5304,7 @@ input[type="radio"] {
 #hireStatus.done::before  { background: #4e9a52; }
 
 /* =========================================================
-   YUKI TABS — PER-TAB THEMES
+   YUKI TABS, PER-TAB THEMES
    Each tool gets its own object; the window chrome and the
    tab strip stay constant.
    ========================================================= */
@@ -5482,7 +5482,7 @@ input[type="radio"] {
 }
 
 /* =========================================================
-   WORK WITH ME — CARBON-COPY DOCKET
+   WORK WITH ME, CARBON-COPY DOCKET
    A workshop job sheet: kraft ground, tinted carbon layers,
    and a stamped receipt on the confirmation.
    ========================================================= */
@@ -5627,7 +5627,7 @@ input[type="radio"] {
    (1.4.1), motion opt-out (2.3.3), and target sizes.
    ========================================================= */
 
-/* 2.4.7 Focus Visible — one consistent, high-contrast ring
+/* 2.4.7 Focus Visible, one consistent, high-contrast ring
    that survives every theme, dark or light. */
 a:focus-visible,
 button:focus-visible,
@@ -5648,7 +5648,7 @@ textarea:focus-visible,
   outline-offset: -3px;
 }
 
-/* 2.5.5 / 2.5.8 Target Size — nothing interactive below 24px,
+/* 2.5.5 / 2.5.8 Target Size, nothing interactive below 24px,
    and comfortable targets on touch. */
 .case-file, .book, .yuki-tool,
 .paint-tool, .paint-size, .start-links button {
@@ -5711,7 +5711,7 @@ textarea:focus-visible,
 }
 
 /* =========================================================
-   START MENU — PORTRAIT LAYOUT
+   START MENU, PORTRAIT LAYOUT
    Illustration down the left with All Programs beneath it,
    menu entries on the right.
    ========================================================= */
@@ -5929,7 +5929,7 @@ textarea:focus-visible,
 }
 
 /* =========================================================
-   PORTFOLIO — CASE FILES
+   PORTFOLIO, CASE FILES
    Divider tabs across a drawer of open folders. Each card
    leads with the work, since that is what a portfolio is for.
    ========================================================= */
@@ -6480,3 +6480,679 @@ textarea:focus-visible,
   .project-title { font-size: 24px; }
   .project-cover { aspect-ratio: 16 / 9; }
 }
+
+/* =========================================================
+   PORTFOLIO, RESULT LINE, FEATURED, PROJECT NAVIGATION
+   ========================================================= */
+
+/* The outcome is what a recruiter scans for, so it sits on the card */
+.case-outcome {
+  margin: 6px 0 0 0;
+  padding-top: 6px;
+  border-top: 1px dashed #d9c9a8;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #4a3c26;
+}
+
+/* Featured work leads the drawer and says so */
+.case-file.is-featured {
+  border-color: #b08b4f;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.7),
+    0 0 0 2px #d9a441,
+    2px 4px 9px rgba(70,55,30,.34);
+}
+.case-file.is-featured .case-body::before {
+  content: "SELECTED";
+  position: absolute;
+  top: -11px;
+  right: 10px;
+  padding: 2px 8px;
+  background: #d9a441;
+  border: 1px solid #a87c2e;
+  border-radius: 2px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #3b2f14;
+}
+
+/* Reading one project should lead to the next */
+.project-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 26px;
+  padding-top: 16px;
+  border-top: 1px solid #d3c09a;
+}
+.project-nav .xp-button {
+  flex: 1;
+  min-height: 38px;
+  padding: 7px 12px;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.project-nav .xp-button:disabled { opacity: .4; }
+
+@media (max-width: 700px) {
+  .project-nav { flex-direction: column; }
+  .project-nav .xp-button { width: 100%; }
+}
+
+/* =========================================================
+   TABLES IN CASE STUDIES
+   ========================================================= */
+
+.table-scroll {
+  margin: 18px 0;
+  overflow-x: auto;
+  border: 1px solid #d3c09a;
+  border-radius: 2px;
+  background: #fdfaf1;
+}
+.project-write-up table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+.project-write-up th,
+.project-write-up td {
+  padding: 9px 12px;
+  text-align: left;
+  border-bottom: 1px solid #e6dbc0;
+}
+.project-write-up thead th {
+  background: #efe4cb;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  color: #6b573a;
+  border-bottom: 2px solid #cbb894;
+}
+.project-write-up tbody tr:last-child td { border-bottom: 0; }
+.project-write-up tbody tr:nth-child(even) { background: rgba(217,164,65,.06); }
+
+/* =========================================================
+   IMAGE VIEWER
+   ========================================================= */
+
+body.lightbox-open { overflow: hidden; }
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 20000;
+  display: grid;
+  grid-template-columns: 64px 1fr 64px;
+  align-items: center;
+  background: rgba(20, 16, 10, .93);
+  backdrop-filter: blur(3px);
+}
+.lightbox[hidden] { display: none; }
+
+.lightbox-stage {
+  grid-column: 2;
+  margin: 0;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.lightbox-stage img {
+  max-width: 100%;
+  max-height: 82vh;
+  object-fit: contain;
+  border: 1px solid rgba(255,255,255,.18);
+  box-shadow: 0 12px 40px rgba(0,0,0,.6);
+  background: #fff;
+}
+.lightbox-stage figcaption {
+  max-width: 640px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.45;
+  color: #f2e9d8;
+}
+.lightbox-stage figcaption[hidden] { display: none; }
+
+.lightbox button {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 3px;
+  background: rgba(255,255,255,.1);
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+}
+.lightbox button:hover { background: rgba(255,255,255,.22); }
+
+.lightbox-prev { grid-column: 1; justify-self: center; }
+.lightbox-next { grid-column: 3; justify-self: center; }
+
+.lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  font-size: 26px !important;
+}
+
+.lightbox-count {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  color: #d8ccb4;
+}
+
+/* Images in a case study read as clickable */
+.project-content img { cursor: zoom-in; }
+.project-nav img { cursor: default; }
+
+@media (max-width: 700px) {
+  .lightbox { grid-template-columns: 44px 1fr 44px; }
+  .lightbox button { width: 38px; height: 38px; font-size: 17px; }
+}
+
+/* =========================================================
+   GALLERY COLUMNS + ATTACHMENTS
+   ========================================================= */
+
+.project-gallery[data-cols="1"] { grid-template-columns: 1fr; }
+.project-gallery[data-cols="2"] { grid-template-columns: repeat(2, 1fr); }
+.project-gallery[data-cols="3"] { grid-template-columns: repeat(3, 1fr); }
+
+.project-files {
+  margin: 20px 0;
+  padding: 14px 16px;
+  background: #fdfaf1;
+  border: 1px solid #d3c09a;
+  border-left: 3px solid #b08b4f;
+  border-radius: 2px;
+}
+.project-files h3 {
+  margin-bottom: 8px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+  color: #8a6d3b;
+}
+.project-files ul { list-style: none; display: grid; gap: 5px; }
+.project-files a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 7px 9px;
+  background: #f6eddc;
+  border: 1px solid #ddcaa6;
+  border-radius: 2px;
+  color: #4a3c26;
+  font-size: 15px;
+  text-decoration: none;
+}
+.project-files a:hover { background: #efe2c6; color: #2b2317; }
+.project-files a::before { content: "\\1F4CE"; font-size: 16px; }
+
+@media (max-width: 700px) {
+  .project-gallery[data-cols="2"],
+  .project-gallery[data-cols="3"] { grid-template-columns: 1fr; }
+}
+
+/* =========================================================
+   PORTFOLIO SORT
+   ========================================================= */
+
+.case-sort {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 12px 0 0 2px;
+  color: #f0e7d6;
+}
+.case-sort label {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  color: #e8c98a;
+}
+.case-sort select {
+  min-height: 44px;
+  padding: 6px 10px;
+  border: 1px solid #8a7a5c;
+  border-radius: 3px;
+  background: #e6cd97;
+  color: #2c2317;
+  font-family: var(--xp-font);
+  font-size: 14px;
+}
+
+/* =========================================================
+   ABOUT: header, CV button, tool board, cat stamp
+   ========================================================= */
+
+.library-header {
+  justify-content: space-between;
+}
+.reader-meta h2 { font-size: 19px; }
+
+.cv-download {
+  flex-shrink: 0;
+  min-height: 44px;
+  padding: 10px 18px;
+  font-size: 15px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ---------- Tools board ---------- */
+
+.tool-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 4px;
+}
+.tool-col {
+  padding: 10px;
+  background: #fdfaf1;
+  border: 1px solid #ddcaa6;
+  border-radius: 3px;
+}
+.tool-col-name {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 3px 9px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .4px;
+  color: #2b2317;
+  background: #e4d5b4;
+}
+.tool-col-name[data-col="advanced"]     { background: #bcd4ea; }
+.tool-col-name[data-col="intermediate"] { background: #c9dfc2; }
+.tool-col-name[data-col="learning"]     { background: #ddc9e6; }
+
+.tool-col ul { list-style: none; display: grid; gap: 4px; }
+.tool {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 7px;
+  min-height: 36px;
+  background: #f7f0e0;
+  border: 1px solid #e2d5b6;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 1.25;
+  color: #3a2f1e;
+}
+.tool img,
+.tool-mark {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 4px;
+  object-fit: contain;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0,0,0,.3);
+}
+.tool-empty { font-size: 14px; color: #8a7550; }
+
+/* ---------- Timeline sub-bullets ---------- */
+
+.timeline li ul {
+  margin: 6px 0 0 0;
+  padding-left: 16px;
+  list-style: disc;
+}
+.timeline li ul li {
+  margin-bottom: 4px;
+  padding: 0;
+  border: 0;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #4a3c26;
+}
+.timeline li ul li::before { display: none; }
+.timeline-earlier p { margin: 4px 0 0 0; font-size: 14px; }
+
+/* Inline margin notes sit inside their block */
+.note-inline { float: right; width: 44%; margin: 0 0 8px 12px; }
+
+/* =========================================================
+   WRITE TO ME: contact card
+   ========================================================= */
+
+.card-rows li {
+  grid-template-columns: 92px minmax(0, 1fr);
+  align-items: start;
+  gap: 10px;
+}
+.card-rows li > a,
+.card-rows li > span:last-child,
+.card-link {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  line-height: 1.4;
+}
+
+.card-link {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #b45309;
+  font: inherit;
+  text-align: left;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.card-link:hover { color: #8a3d06; }
+
+/* The cat sits in the corner and never crosses the text */
+.card-cat {
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+  width: 44px;
+  pointer-events: none;
+  opacity: .5;
+}
+.card-cat svg { width: 100%; height: auto; display: block; }
+.card-cat path  { fill: #2b2317; }
+.card-cat .eye  { fill: #f6eddc; }
+
+/* Below this width the cat would collide with the rows */
+@media (max-width: 560px) {
+  .card-cat { display: none; }
+}
+
+/* =========================================================
+   SOUND TOGGLE
+   ========================================================= */
+
+.taskbar-sound {
+  flex-shrink: 0;
+  width: 44px;
+  height: 100%;
+  min-height: 44px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.sound-icon {
+  position: relative;
+  width: 15px;
+  height: 13px;
+  display: block;
+}
+/* Speaker body */
+.sound-icon::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 3.5px 7px 3.5px 0;
+  border-color: transparent #2a2c3c transparent transparent;
+}
+/* Waves when on, slash when off */
+.sound-icon::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 1px;
+  width: 7px;
+  height: 11px;
+  border-right: 2px solid #8b8da6;
+  border-radius: 0 8px 8px 0;
+  transform: rotate(-4deg);
+}
+.taskbar-sound.on .sound-icon::after {
+  border-right-color: #2a7a35;
+  box-shadow: -3px 0 0 -1px #2a7a35;
+}
+.taskbar-sound:not(.on) .sound-icon::after {
+  border-right: 0;
+  background:
+    linear-gradient(to bottom right,
+      transparent 44%, #a33 44%, #a33 56%, transparent 56%);
+  border-radius: 0;
+  width: 11px;
+  height: 11px;
+  transform: none;
+}
+
+/* =========================================================
+   GAME: touch controls
+   ========================================================= */
+
+.touch-pad {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 6;
+  display: none;
+  justify-content: space-between;
+  padding: 10px 12px;
+  pointer-events: none;
+}
+.touch-btn {
+  pointer-events: auto;
+  min-width: 60px;
+  min-height: 60px;
+  display: grid;
+  place-items: center;
+  border: 2px solid rgba(255,255,255,.55);
+  border-radius: 50%;
+  background: rgba(20, 24, 40, .42);
+  color: #fff;
+  font-family: var(--xp-font);
+  font-size: 16px;
+  font-weight: 700;
+  backdrop-filter: blur(2px);
+  touch-action: none;
+  user-select: none;
+}
+.touch-btn:active { background: rgba(20, 24, 40, .68); }
+.touch-jump {
+  min-width: 76px;
+  min-height: 76px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.touch-left { margin-right: auto; }
+.touch-right { margin-left: 10px; margin-right: auto; }
+
+/* Only where there is no mouse */
+@media (pointer: coarse) {
+  .touch-pad { display: flex; }
+}
+
+.yuki-game { position: relative; touch-action: manipulation; }
+
+/* =========================================================
+   TOUCH TARGETS
+   WCAG 2.5.5 asks for 44 by 44. Applied wherever a finger
+   is the likely input.
+   ========================================================= */
+
+@media (pointer: coarse) {
+
+  .xp-button,
+  .divider-tab,
+  .yuki-tool,
+  .book,
+  .start-links button,
+  .start-flyout button,
+  .taskbar-app,
+  .start-button,
+  .paint-tool,
+  .paint-size,
+  .page-nav button,
+  .card-link,
+  .case-file,
+  .window-controls button,
+  .lightbox button,
+  .hire-form select,
+  .hire-form input,
+  .case-sort select {
+    min-height: 44px;
+  }
+
+  .window-controls button,
+  .paint-tool,
+  .paint-size,
+  .lightbox button {
+    min-width: 44px;
+  }
+
+  /* Space them so neighbouring targets are not mis-tapped */
+  .window-controls { gap: 4px; }
+  .paint-toolbox { gap: 4px; }
+
+}
+
+@media (max-width: 700px) {
+  .tool-board { grid-template-columns: 1fr; }
+  .note-inline { float: none; width: auto; margin: 8px 0; }
+  .library-header { flex-wrap: wrap; gap: 10px; }
+  .cv-download { width: 100%; justify-content: center; }
+}
+
+/* =========================================================
+   PORTFOLIO CABINET
+   The tabs, the sort bar and the files are one object now,
+   so switching a divider reads as opening a different
+   drawer rather than swapping cards under a floating menu.
+   ========================================================= */
+
+/* The old floating sort bar is replaced by the toolbar below */
+.portfolio-content > .case-sort { display: none; }
+
+.case-cabinet {
+  background: #e6cd97;
+  border: 1px solid #8a7a5c;
+  border-radius: 0 4px 4px 4px;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.5),
+    0 3px 10px rgba(60,45,20,.28);
+  overflow: hidden;
+}
+
+/* Toolbar sits inside the drawer, above the files */
+.case-cabinet .case-sort {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 10px 13px;
+  background: linear-gradient(180deg, #ddc593 0%, #d0b782 100%);
+  border-bottom: 1px solid #b09a70;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.55);
+}
+
+.case-cabinet .case-sort label {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  color: #4a3a1c;
+}
+
+.case-cabinet .case-sort select {
+  min-height: 38px;
+  padding: 6px 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #8a7a5c #fffaf0 #fffaf0 #8a7a5c;
+  border-radius: 0;
+  background: #fdfaf1;
+  color: #2c2317;
+  font-family: var(--xp-font);
+  font-size: 15px;
+  box-shadow: inset 1px 1px 0 rgba(120,95,50,.3);
+}
+
+.case-count {
+  margin-left: auto;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  color: #6b573a;
+}
+
+/* The drawer loses its own frame now that the cabinet has one */
+.case-cabinet .case-drawer {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+/* The selected divider joins the cabinet below it */
+.case-dividers { margin-bottom: -1px; }
+
+@media (max-width: 700px) {
+  .case-cabinet .case-sort { flex-wrap: wrap; gap: 7px; }
+  .case-count { margin-left: 0; width: 100%; }
+}
+
+/* =========================================================
+   ABOUT: give the window a definite height
+
+   Without one the window grows to fit its content, so the
+   inner page never overflows and the scrollbar only appears
+   once the window is dragged smaller. A bounded height means
+   the chapter scrolls properly from the start.
+   ========================================================= */
+
+#aboutPopup {
+  height: min(680px, calc(100vh - 46px));
+}
+
+.about-content.library {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.book-spread {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.book-page {
+  height: 100%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+/* The header and shelf keep their size; only the page scrolls */
+.library-header,
+.shelf-wrap { flex-shrink: 0; }
