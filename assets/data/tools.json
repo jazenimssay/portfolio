@@ -38,23 +38,23 @@
         },
         {
           "name": "Claude AI",
-          "logo": "assets/img/work/claude-vector-logo_logoshape.com.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Claude_AI_symbol.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
         },
         {
           "name": "Notion",
-          "logo": "assets/img/work/notion-logo_logoshape.com.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Notion-logo.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
         },
         {
           "name": "Google Slides",
-          "logo": "assets/img/work/google_slides_logo.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Google_Slides_logo_%282014-2020%29.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
         },
         {
           "name": "CapCut",
-          "logo": "assets/img/work/capcut-logo-vector_logoshape.com.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Capcut-icon.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
         },
         {
           "name": "WebAIM",
-          "logo": "assets/img/work/webaim.png"
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/e/e9/WebAIM_Logo.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
         }
       ]
     },
@@ -71,11 +71,11 @@
         },
         {
           "name": "Premiere Pro",
-          "logo": "assets/img/work/adobe-premiere-pro-logo.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
         },
         {
           "name": "After Effects",
-          "logo": "assets/img/work/adobe-after-effects-logo.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
         },
         {
           "name": "HTML",
