@@ -1,0 +1,37 @@
+{
+  "columns": [
+    {
+      "name": "Advanced",
+      "tools": [
+        { "name": "Illustrator", "logo": "" },
+        { "name": "Photoshop", "logo": "" },
+        { "name": "Figma & FigJam", "logo": "" },
+        { "name": "ChatGPT", "logo": "" },
+        { "name": "Slack", "logo": "" },
+        { "name": "Magnific", "logo": "" }
+      ]
+    },
+    {
+      "name": "Intermediate",
+      "tools": [
+        { "name": "Visual Studio Code", "logo": "" },
+        { "name": "Claude AI", "logo": "" },
+        { "name": "Notion", "logo": "" },
+        { "name": "Google Slides", "logo": "" },
+        { "name": "CapCut", "logo": "" },
+        { "name": "WebAIM", "logo": "" }
+      ]
+    },
+    {
+      "name": "Learning",
+      "tools": [
+        { "name": "Webflow", "logo": "" },
+        { "name": "Framer", "logo": "" },
+        { "name": "Premiere Pro", "logo": "" },
+        { "name": "After Effects", "logo": "" },
+        { "name": "HTML", "logo": "" },
+        { "name": "CSS", "logo": "" }
+      ]
+    }
+  ]
+}
