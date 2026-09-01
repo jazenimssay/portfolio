@@ -3,34 +3,88 @@
     {
       "name": "Advanced",
       "tools": [
-        { "name": "Illustrator", "logo": "" },
-        { "name": "Photoshop", "logo": "" },
-        { "name": "Figma & FigJam", "logo": "" },
-        { "name": "ChatGPT", "logo": "" },
-        { "name": "Slack", "logo": "" },
-        { "name": "Magnific", "logo": "" }
+        {
+          "name": "Illustrator",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+        },
+        {
+          "name": "Photoshop",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+        },
+        {
+          "name": "Figma & FigJam",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+        },
+        {
+          "name": "ChatGPT",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/e/ef/ChatGPT-Logo.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+        },
+        {
+          "name": "Slack",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+        },
+        {
+          "name": "Magnific",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/2/27/Magnific-icon.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+        }
       ]
     },
     {
       "name": "Intermediate",
       "tools": [
-        { "name": "Visual Studio Code", "logo": "" },
-        { "name": "Claude AI", "logo": "" },
-        { "name": "Notion", "logo": "" },
-        { "name": "Google Slides", "logo": "" },
-        { "name": "CapCut", "logo": "" },
-        { "name": "WebAIM", "logo": "" }
+        {
+          "name": "Visual Studio Code",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+        },
+        {
+          "name": "Claude AI",
+          "logo": "assets/img/work/claude-vector-logo_logoshape.com.svg"
+        },
+        {
+          "name": "Notion",
+          "logo": "assets/img/work/notion-logo_logoshape.com.svg"
+        },
+        {
+          "name": "Google Slides",
+          "logo": "assets/img/work/google_slides_logo.svg"
+        },
+        {
+          "name": "CapCut",
+          "logo": "assets/img/work/capcut-logo-vector_logoshape.com.svg"
+        },
+        {
+          "name": "WebAIM",
+          "logo": "assets/img/work/webaim.png"
+        }
       ]
     },
     {
       "name": "Learning",
       "tools": [
-        { "name": "Webflow", "logo": "" },
-        { "name": "Framer", "logo": "" },
-        { "name": "Premiere Pro", "logo": "" },
-        { "name": "After Effects", "logo": "" },
-        { "name": "HTML", "logo": "" },
-        { "name": "CSS", "logo": "" }
+        {
+          "name": "Webflow",
+          "logo": "assets/img/work/social_square_blue.png"
+        },
+        {
+          "name": "Framer",
+          "logo": "assets/img/work/idy53brceu_1788295441579.jpeg"
+        },
+        {
+          "name": "Premiere Pro",
+          "logo": "assets/img/work/adobe-premiere-pro-logo.svg"
+        },
+        {
+          "name": "After Effects",
+          "logo": "assets/img/work/adobe-after-effects-logo.svg"
+        },
+        {
+          "name": "HTML",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Html-1.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+        },
+        {
+          "name": "CSS",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/3/3d/CSS.3.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+        }
       ]
     }
   ]
