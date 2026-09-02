@@ -2,9 +2,9 @@
 
 backend:
   name: github
-  repo: jazenimssay/portfolio2
+  repo: jazenimssay/portfolio
   branch: main
-  base_url: https://portfolio.ouaras-yassmine.workers.dev
+  base_url: https://portfolio.ouaras-yassmine.workers.dev/callback
   
 media_folder: "assets/img/work"
 public_folder: "assets/img/work"
