@@ -4334,7 +4334,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   (function initializeAmbience() {
 
-    const toggle = $("#soundToggle");
+    const toggle = $("#volume");
 
     if (!toggle || !window.AudioContext && !window.webkitAudioContext) return;
 
