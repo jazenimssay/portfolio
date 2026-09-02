@@ -1979,6 +1979,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (progress) {
 
+         
         const percentage =
           totalSeconds > 0
             ? ((totalSeconds - remainingSeconds) /
@@ -4318,51 +4319,107 @@ document.addEventListener("DOMContentLoaded", () => {
   (function initializeAmbience() {
 
     const toggle = $("#volume");
+    if (!toggle) return;
 
-    if (!toggle || !window.AudioContext && !window.webkitAudioContext) return;
-
+    const Ctx = window.AudioContext || window.webkitAudioContext;
     let ctx = null;
     let master = null;
-    let timer = null;
+    let music = null;
     let playing = false;
 
-    /* A gentle ii, V, I, vi in A minor. Slow enough to sit behind reading. */
-    const chords = [
-      [220.00, 261.63, 329.63],
-      [174.61, 220.00, 261.63],
-      [196.00, 246.94, 293.66],
-      [164.81, 196.00, 246.94]
-    ];
+    /* Shared context, created on the first real click. */
+    function audio() {
+      if (!ctx && Ctx) {
+        ctx = new Ctx();
+        master = ctx.createGain();
+        master.gain.value = 0.9;
+        master.connect(ctx.destination);
+      }
+      ctx?.resume?.();
+      return ctx;
+    }
 
-    let step = 0;
-
-
-    function voice(freq, at, length) {
-
+    /* Short synthesised blips, so no extra files to load. */
+    function blip({ freq = 1200, length = 0.03, type = "square", level = 0.05 }) {
+      if (!playing || !audio()) return;
       const osc = ctx.createOscillator();
       const gain = ctx.createGain();
-      const filter = ctx.createBiquadFilter();
-
-      osc.type = "sine";
-      osc.frequency.value = freq;
-
-      /* Roll the top off so it stays soft rather than glassy. */
-      filter.type = "lowpass";
-      filter.frequency.value = 900;
-
-      /* Long fade in and out, so notes never click. */
-      gain.gain.setValueAtTime(0.0001, at);
-      gain.gain.exponentialRampToValueAtTime(0.11, at + length * 0.35);
+      const at = ctx.currentTime;
+      osc.type = type;
+      osc.frequency.setValueAtTime(freq, at);
+      gain.gain.setValueAtTime(level, at);
       gain.gain.exponentialRampToValueAtTime(0.0001, at + length);
-
-      osc.connect(filter);
-      filter.connect(gain);
+      osc.connect(gain);
       gain.connect(master);
-
       osc.start(at);
-      osc.stop(at + length + 0.1);
-
+      osc.stop(at + length + 0.02);
     }
+
+    /* A dry two-part tick, like a mechanical switch. */
+    window.__uiClick = () => {
+      blip({ freq: 1800, length: 0.018, type: "square", level: 0.05 });
+      setTimeout(() => blip({ freq: 900, length: 0.03, type: "square", level: 0.035 }), 22);
+    };
+
+    /* Softer, higher, with slight variation so it doesn't drone. */
+    window.__uiKey = () => {
+      blip({
+        freq: 1500 + Math.random() * 500,
+        length: 0.014,
+        type: "triangle",
+        level: 0.03
+      });
+    };
+
+    function start() {
+      if (!audio()) return;
+
+      if (!music) {
+        music = new Audio("assets/audio/lofi-soul.mp3");
+        music.loop = true;
+        music.volume = 0.22;
+        music.addEventListener("error", () => { music = null; });
+      }
+
+      music?.play?.().catch(() => {});
+      playing = true;
+
+      toggle.classList.remove("muted");
+      toggle.setAttribute("aria-pressed", "false");
+      toggle.setAttribute("aria-label", "Volume: on");
+      toggle.title = "Volume: on";
+
+      try { localStorage.setItem("yassmine.sound", "on"); } catch (e) {}
+    }
+
+    function stop() {
+      music?.pause?.();
+      playing = false;
+
+      toggle.classList.add("muted");
+      toggle.setAttribute("aria-pressed", "true");
+      toggle.setAttribute("aria-label", "Volume: off");
+      toggle.title = "Volume: off";
+
+      try { localStorage.setItem("yassmine.sound", "off"); } catch (e) {}
+    }
+
+    toggle.addEventListener("click", () => playing ? stop() : start());
+
+    /* Sound is off until asked for. Browsers block it otherwise,
+       and arriving to unexpected audio is hostile. */
+    stop();
+
+    /* Clicks on real controls tick, once sound is on. */
+    document.addEventListener("click", event => {
+      if (!playing) return;
+      if (event.target.closest("#volume")) return;
+      if (event.target.closest("button, .book, .case-file, .divider-tab, a")) {
+        window.__uiClick();
+      }
+    });
+
+  })();
 
 
     function scheduleChord() {
