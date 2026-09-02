@@ -4,8 +4,8 @@ backend:
   name: github
   repo: jazenimssay/portfolio
   branch: main
-  base_url: https://sveltia-cms-auth.ouaras-yassmine.workers.dev/callback
-  
+base_url: https://sveltia-cms-auth.ouaras-yassmine.workers.dev
+
 media_folder: "assets/img/work"
 public_folder: "assets/img/work"
 
