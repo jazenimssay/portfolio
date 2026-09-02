@@ -608,24 +608,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const taskbarClock = $("#taskbarClock");
   const volumeIcon = $("#volume");
 
-  if (volumeIcon) {
-    let muted = false;
-
-    volumeIcon.addEventListener("click", event => {
-      event.preventDefault();
-      event.stopPropagation();
-
-      muted = !muted;
-      volumeIcon.classList.toggle("muted", muted);
-      volumeIcon.setAttribute("aria-pressed", String(muted));
-      volumeIcon.setAttribute(
-        "aria-label",
-        muted ? "Volume: off" : "Volume: on"
-      );
-      volumeIcon.title =
-        muted ? "Volume: off" : "Volume: on";
-    });
-  }
+  
 
   function updateClock() {
     if (!timeElement) return;
