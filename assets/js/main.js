@@ -1056,11 +1056,19 @@ document.addEventListener("DOMContentLoaded", () => {
       const endpoint = hireForm.dataset.endpoint?.trim();
 
       /*
-        With no custom endpoint, post back to the site itself:
-        Netlify picks the submission up from the form's name
-        and emails it on. Nothing to configure in the markup.
+        Without an endpoint there is nowhere for this to go.
+        Posting to the site itself would return the homepage
+        with a 200, which reads as success and quietly loses
+        the message. Say so instead.
       */
-      const target = endpoint || "/";
+      if (!endpoint) {
+        setResponse(
+          "This form isn't connected to an inbox yet. Email me directly at ouaras.yassmine@gmail.com.",
+          "bad"
+        );
+        setStatus("Not connected.", "error");
+        return;
+      }
 
       if (sendButton) {
         sendButton.disabled = true;
@@ -1077,14 +1085,10 @@ document.addEventListener("DOMContentLoaded", () => {
           Netlify expects urlencoded; a third-party endpoint is
           happier with the raw FormData.
         */
-        const result = await fetch(target, {
+        const result = await fetch(endpoint, {
           method: "POST",
-          headers: endpoint
-            ? { Accept: "application/json" }
-            : { "Content-Type": "application/x-www-form-urlencoded" },
-          body: endpoint
-            ? data
-            : new URLSearchParams(data).toString()
+          headers: { Accept: "application/json" },
+          body: data
         });
 
         if (!result.ok) throw new Error(result.status);
@@ -4024,12 +4028,33 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
+  /*
+    Covers arrive in two shapes: a bare filename from the
+    original data, or a full path written by the content
+    manager. Accept both rather than doubling the folder.
+  */
+  function imagePath(value) {
+
+    const name = String(value || "").trim();
+
+    if (!name) return "";
+
+    /* Already a path, a full URL, or rooted at the site. */
+    if (name.includes("/")) {
+      return name.replace(/^\//, "");
+    }
+
+    return `assets/img/work/${name}`;
+
+  }
+
+
   function projectCard(project) {
 
     const inner = `
       <div class="case-thumb">
         ${project.image
-          ? `<img src="assets/img/work/${escapeHtml(project.image)}" alt="${escapeHtml(project.title)} cover" loading="lazy">`
+          ? `<img src="${escapeHtml(imagePath(project.image))}" alt="${escapeHtml(project.title)} cover" loading="lazy">`
           : `<span class="thumb-empty">No cover yet</span>`}
       </div>
       <div class="case-body">
@@ -4801,7 +4826,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ? `<div class="project-gallery" data-cols="${escapeHtml(cols)}">` +
           project.gallery.map(item => `
             <figure>
-              <img src="${escapeHtml(item.src)}" alt="${escapeHtml(item.caption || project.title)}" loading="lazy">
+              <img src="${escapeHtml(imagePath(item.src))}" alt="${escapeHtml(item.caption || project.title)}" loading="lazy">
               ${item.caption ? `<figcaption>${escapeHtml(item.caption)}</figcaption>` : ""}
             </figure>`).join("") + `</div>`
         : "";
@@ -4818,7 +4843,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       body.innerHTML = `
         ${project.image
-          ? `<div class="project-cover"><img src="assets/img/work/${escapeHtml(project.image)}" alt="${escapeHtml(project.title)} cover"></div>`
+          ? `<div class="project-cover"><img src="${escapeHtml(imagePath(project.image))}" alt="${escapeHtml(project.title)} cover"></div>`
           : ""}
 
         <div class="project-inner">
