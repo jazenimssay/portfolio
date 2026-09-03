@@ -665,6 +665,8 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!deleting) {
 
         characterIndex++;
+          window.__uiKey?.();
+
 
         typedRole.textContent =
           role.slice(0, characterIndex);
