@@ -447,9 +447,12 @@
       <span><img src="assets/img/work-icon.png" alt="">Work with Me</span>
       <div class="window-controls"><button class="minimize-popup" title="Minimize" aria-label="Minimize"></button><button class="maximize-popup" title="Maximize" aria-label="Maximize"></button><button class="close-popup" title="Close" aria-label="Close"></button></div>
     </header>
-    <form class="popup-content hire-form" name="project-request" method="POST"
-          data-netlify="true" netlify-honeypot="bot-field" data-endpoint="" novalidate>
-      <input type="hidden" name="form-name" value="project-request">
+    <form class="popup-content hire-form" method="POST"
+          data-endpoint="https://api.web3forms.com/submit" novalidate>
+      <input type="hidden" name="access_key" value="663a4686-bf6b-446f-9827-3caf87997ca9">
+      <input type="hidden" name="subject" value="New project request from your portfolio">
+      <input type="hidden" name="from_name" value="Portfolio site">
+      
       <p class="sr-only" aria-hidden="true">
         <label>Leave this empty <input name="bot-field"></label>
       </p>
