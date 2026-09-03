@@ -4307,12 +4307,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* =======================================================
-     BACKGROUND MUSIC
+     SOUND
 
-     Generated with the Web Audio API rather than an audio
-     file: nothing to license, nothing to download, and it
-     never loops audibly. A slow chord pad with a soft
-     pulse, kept quiet enough to read over.
+     Everything here is synthesised in the browser, so there
+     are no files to license or load. The music is the one
+     exception: it plays an mp3 if you have added one.
      ======================================================= */
 
   (function initializeAmbience() {
@@ -4325,8 +4324,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let master = null;
     let music = null;
     let playing = false;
+    let noiseBuffer = null;
 
-    /* Shared context, created on the first real click. */
     function audio() {
       if (!ctx && Ctx) {
         ctx = new Ctx();
@@ -4338,37 +4337,130 @@ document.addEventListener("DOMContentLoaded", () => {
       return ctx;
     }
 
-    /* Short synthesised blips, so no extra files to load. */
-    function blip({ freq = 1200, length = 0.03, type = "square", level = 0.05 }) {
-      if (!playing || !audio()) return;
-      const osc = ctx.createOscillator();
+    /* A short burst of white noise, reused for every percussive hit. */
+    function noise() {
+      if (!noiseBuffer) {
+        const length = ctx.sampleRate * 0.2;
+        noiseBuffer = ctx.createBuffer(1, length, ctx.sampleRate);
+        const data = noiseBuffer.getChannelData(0);
+        for (let i = 0; i < length; i++) data[i] = Math.random() * 2 - 1;
+      }
+      const src = ctx.createBufferSource();
+      src.buffer = noiseBuffer;
+      return src;
+    }
+
+    /* The bright transient: the plastic-on-plastic part of a keypress. */
+    function transient({ freq, q, length, level, at }) {
+      const src = noise();
+      const filter = ctx.createBiquadFilter();
       const gain = ctx.createGain();
-      const at = ctx.currentTime;
-      osc.type = type;
-      osc.frequency.setValueAtTime(freq, at);
+
+      filter.type = "bandpass";
+      filter.frequency.value = freq;
+      filter.Q.value = q;
+
       gain.gain.setValueAtTime(level, at);
       gain.gain.exponentialRampToValueAtTime(0.0001, at + length);
+
+      src.connect(filter);
+      filter.connect(gain);
+      gain.connect(master);
+      src.start(at);
+      src.stop(at + length + 0.02);
+    }
+
+    /* The low thump underneath: the key bottoming out. */
+    function thock({ freq, length, level, at, type = "sine" }) {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+
+      osc.type = type;
+      osc.frequency.setValueAtTime(freq, at);
+      osc.frequency.exponentialRampToValueAtTime(freq * 0.6, at + length);
+
+      gain.gain.setValueAtTime(level, at);
+      gain.gain.exponentialRampToValueAtTime(0.0001, at + length);
+
       osc.connect(gain);
       gain.connect(master);
       osc.start(at);
       osc.stop(at + length + 0.02);
     }
 
-    /* A dry two-part tick, like a mechanical switch. */
-    window.__uiClick = () => {
-      blip({ freq: 1800, length: 0.018, type: "square", level: 0.05 });
-      setTimeout(() => blip({ freq: 900, length: 0.03, type: "square", level: 0.035 }), 22);
+    /*
+      A mechanical keyswitch: sharp noise transient over a
+      short low thump, with slight random variation so a run
+      of characters does not sound machine-stamped.
+    */
+    window.__uiKey = () => {
+      if (!playing || !audio()) return;
+      const at = ctx.currentTime;
+      const vary = 0.9 + Math.random() * 0.25;
+
+      transient({ freq: 2600 * vary, q: 1.4, length: 0.012, level: 0.10, at });
+      thock({ freq: 190 * vary, length: 0.045, level: 0.075, at });
     };
 
-    /* Softer, higher, with slight variation so it doesn't drone. */
-    window.__uiKey = () => {
-      blip({
-        freq: 1500 + Math.random() * 500,
-        length: 0.014,
-        type: "triangle",
-        level: 0.03
+    /* A firmer, lower version for buttons and windows. */
+    window.__uiClick = () => {
+      if (!playing || !audio()) return;
+      const at = ctx.currentTime;
+
+      transient({ freq: 1900, q: 1.1, length: 0.016, level: 0.085, at });
+      thock({ freq: 150, length: 0.06, level: 0.07, at });
+    };
+
+    /* Barely there, because hover fires constantly. */
+    window.__uiHover = () => {
+      if (!playing || !audio()) return;
+      transient({
+        freq: 3400, q: 2.2, length: 0.008,
+        level: 0.022, at: ctx.currentTime
       });
     };
+
+    /*
+      A meow: a rising then falling pitch through a vowel-ish
+      filter pair, which is roughly how a cat sound reads.
+    */
+    let lastMeow = 0;
+    window.__uiMeow = () => {
+      if (!playing || !audio()) return;
+
+      /* Hovering repeatedly should not produce a chorus of cats. */
+      const now = Date.now();
+      if (now - lastMeow < 2500) return;
+      lastMeow = now;
+
+      const at = ctx.currentTime;
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      const formant = ctx.createBiquadFilter();
+
+      osc.type = "sawtooth";
+      osc.frequency.setValueAtTime(520, at);
+      osc.frequency.linearRampToValueAtTime(760, at + 0.12);
+      osc.frequency.linearRampToValueAtTime(430, at + 0.42);
+
+      formant.type = "bandpass";
+      formant.frequency.setValueAtTime(900, at);
+      formant.frequency.linearRampToValueAtTime(1500, at + 0.14);
+      formant.frequency.linearRampToValueAtTime(700, at + 0.42);
+      formant.Q.value = 4.5;
+
+      gain.gain.setValueAtTime(0.0001, at);
+      gain.gain.exponentialRampToValueAtTime(0.075, at + 0.06);
+      gain.gain.setValueAtTime(0.075, at + 0.26);
+      gain.gain.exponentialRampToValueAtTime(0.0001, at + 0.45);
+
+      osc.connect(formant);
+      formant.connect(gain);
+      gain.connect(master);
+      osc.start(at);
+      osc.stop(at + 0.5);
+    };
+
 
     function start() {
       if (!audio()) return;
@@ -4405,20 +4497,68 @@ document.addEventListener("DOMContentLoaded", () => {
 
     toggle.addEventListener("click", () => playing ? stop() : start());
 
-    /* Sound is off until asked for. Browsers block it otherwise,
-       and arriving to unexpected audio is hostile. */
+    /* Silent until asked. Browsers block audio before a gesture anyway. */
     stop();
 
-    /* Clicks on real controls tick, once sound is on. */
+
+    /* ---------- What makes a sound ---------- */
+
+    const CLICKABLE = [
+      "button",
+      "a",
+      ".book",
+      ".case-file",
+      ".divider-tab",
+      ".yuki-tool",
+      ".desktop-icon",
+      ".start-button",
+      ".taskbar-app",
+      ".close-popup",
+      ".minimize-popup",
+      ".maximize-popup"
+    ].join(",");
+
+    const HOVERABLE = [
+      ".start-links button",
+      ".start-flyout button",
+      ".start-allprograms",
+      ".case-file",
+      ".book",
+      ".divider-tab",
+      ".desktop-icon"
+    ].join(",");
+
     document.addEventListener("click", event => {
       if (!playing) return;
       if (event.target.closest("#volume")) return;
-      if (event.target.closest("button, .book, .case-file, .divider-tab, a")) {
-        window.__uiClick();
+      if (event.target.closest(CLICKABLE)) window.__uiClick();
+    });
+
+    /* Only sound when the pointer actually enters something new. */
+    let lastHover = null;
+
+    document.addEventListener("pointerover", event => {
+      if (!playing) return;
+
+      const yuki = event.target.closest('[data-target="hobbiesPopup"]');
+      if (yuki) {
+        if (yuki !== lastHover) {
+          lastHover = yuki;
+          window.__uiMeow();
+        }
+        return;
       }
+
+      const target = event.target.closest(HOVERABLE);
+      if (target && target !== lastHover) {
+        lastHover = target;
+        window.__uiHover();
+      }
+      if (!target) lastHover = null;
     });
 
   })();
+
 
 
   /* =======================================================
