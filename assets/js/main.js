@@ -608,25 +608,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const taskbarClock = $("#taskbarClock");
   const volumeIcon = $("#volume");
 
-  if (volumeIcon) {
-    let muted = false;
-
-    volumeIcon.addEventListener("click", event => {
-      event.preventDefault();
-      event.stopPropagation();
-
-      muted = !muted;
-      volumeIcon.classList.toggle("muted", muted);
-      volumeIcon.setAttribute("aria-pressed", String(muted));
-      volumeIcon.setAttribute(
-        "aria-label",
-        muted ? "Volume: off" : "Volume: on"
-      );
-      volumeIcon.title =
-        muted ? "Volume: off" : "Volume: on";
-    });
-  }
-
   function updateClock() {
     if (!timeElement) return;
 
@@ -682,6 +663,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!deleting) {
 
         characterIndex++;
+        window.__uiKey?.();
 
         typedRole.textContent =
           role.slice(0, characterIndex);
@@ -4435,102 +4417,6 @@ document.addEventListener("DOMContentLoaded", () => {
         window.__uiClick();
       }
     });
-
-  })();
-
-
-    function scheduleChord() {
-
-      const at = ctx.currentTime + 0.05;
-      const chord = chords[step % chords.length];
-
-      chord.forEach((freq, i) => {
-        /* Stagger the notes very slightly so it breathes. */
-        voice(freq, at + i * 0.18, 7.2);
-      });
-
-      step++;
-
-    }
-
-
-    function start() {
-
-      if (!ctx) {
-
-        ctx = new (window.AudioContext || window.webkitAudioContext)();
-
-        master = ctx.createGain();
-        master.gain.value = 0;
-        master.connect(ctx.destination);
-
-      }
-
-      ctx.resume?.();
-
-      /* Ease the volume up rather than starting at full. */
-      master.gain.cancelScheduledValues(ctx.currentTime);
-      master.gain.setValueAtTime(master.gain.value, ctx.currentTime);
-      master.gain.linearRampToValueAtTime(0.16, ctx.currentTime + 2.5);
-
-      scheduleChord();
-      timer = setInterval(scheduleChord, 6000);
-
-      playing = true;
-      toggle.setAttribute("aria-pressed", "true");
-      toggle.setAttribute("aria-label", "Turn background music off");
-      toggle.classList.add("on");
-
-      try { localStorage.setItem("yassmine.sound", "on"); } catch (e) {}
-
-    }
-
-
-    function stop() {
-
-      clearInterval(timer);
-      timer = null;
-
-      if (master && ctx) {
-        master.gain.cancelScheduledValues(ctx.currentTime);
-        master.gain.setValueAtTime(master.gain.value, ctx.currentTime);
-        master.gain.linearRampToValueAtTime(0.0001, ctx.currentTime + 1.2);
-      }
-
-      playing = false;
-      toggle.setAttribute("aria-pressed", "false");
-      toggle.setAttribute("aria-label", "Turn background music on");
-      toggle.classList.remove("on");
-
-      try { localStorage.setItem("yassmine.sound", "off"); } catch (e) {}
-
-    }
-
-
-    toggle.addEventListener("click", () => playing ? stop() : start());
-
-
-    /*
-      Never autoplay. Browsers block it, and arriving to
-      unexpected sound is hostile. It stays off until asked,
-      but the choice is remembered for the next visit and
-      resumed on the first interaction.
-    */
-    let remembered = null;
-    try { remembered = localStorage.getItem("yassmine.sound"); } catch (e) {}
-
-    if (remembered === "on") {
-
-      const resume = () => {
-        start();
-        document.removeEventListener("pointerdown", resume);
-        document.removeEventListener("keydown", resume);
-      };
-
-      document.addEventListener("pointerdown", resume, { once: true });
-      document.addEventListener("keydown", resume, { once: true });
-
-    }
 
   })();
 
