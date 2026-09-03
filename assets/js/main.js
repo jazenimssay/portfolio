@@ -4395,11 +4395,20 @@ document.addEventListener("DOMContentLoaded", () => {
     */
     window.__uiKey = () => {
       if (!playing || !audio()) return;
-      const at = ctx.currentTime;
-      const vary = 0.9 + Math.random() * 0.25;
 
-      transient({ freq: 2600 * vary, q: 1.4, length: 0.012, level: 0.10, at });
-      thock({ freq: 190 * vary, length: 0.045, level: 0.075, at });
+      /* The hero keeps typing behind open windows. Stay quiet then. */
+      if (document.querySelector(".popup-window.active")) return;
+
+      const at = ctx.currentTime;
+      const vary = 0.94 + Math.random() * 0.14;
+
+      /*
+        A tighter, drier switch. The noise burst is short and
+        narrow so it reads as a click rather than a hiss, and
+        the body underneath carries most of the weight.
+      */
+      transient({ freq: 3200 * vary, q: 9, length: 0.006, level: 0.05, at });
+      thock({ freq: 165 * vary, length: 0.055, level: 0.13, at, type: "triangle" });
     };
 
     /* A firmer, lower version for buttons and windows. */
@@ -4407,16 +4416,16 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!playing || !audio()) return;
       const at = ctx.currentTime;
 
-      transient({ freq: 1900, q: 1.1, length: 0.016, level: 0.085, at });
-      thock({ freq: 150, length: 0.06, level: 0.07, at });
+      transient({ freq: 2400, q: 7, length: 0.008, level: 0.14, at });
+      thock({ freq: 140, length: 0.07, level: 0.24, at, type: "triangle" });
     };
 
     /* Barely there, because hover fires constantly. */
     window.__uiHover = () => {
       if (!playing || !audio()) return;
       transient({
-        freq: 3400, q: 2.2, length: 0.008,
-        level: 0.022, at: ctx.currentTime
+        freq: 3600, q: 6, length: 0.007,
+        level: 0.05, at: ctx.currentTime
       });
     };
 
@@ -4428,37 +4437,72 @@ document.addEventListener("DOMContentLoaded", () => {
     window.__uiMeow = () => {
       if (!playing || !audio()) return;
 
-      /* Hovering repeatedly should not produce a chorus of cats. */
+      /* Just enough of a guard to stop two meows overlapping. */
       const now = Date.now();
-      if (now - lastMeow < 2500) return;
+      if (now - lastMeow < 320) return;
       lastMeow = now;
 
       const at = ctx.currentTime;
+      const length = 0.52;
+
       const osc = ctx.createOscillator();
+      const vibrato = ctx.createOscillator();
+      const vibratoGain = ctx.createGain();
       const gain = ctx.createGain();
-      const formant = ctx.createBiquadFilter();
 
+      /*
+        A meow is two vowels run together, roughly "me" into
+        "ow". The pitch rises quickly then falls away, while
+        the formants slide from a bright vowel to a dark one.
+      */
       osc.type = "sawtooth";
-      osc.frequency.setValueAtTime(520, at);
-      osc.frequency.linearRampToValueAtTime(760, at + 0.12);
-      osc.frequency.linearRampToValueAtTime(430, at + 0.42);
+      osc.frequency.setValueAtTime(440, at);
+      osc.frequency.exponentialRampToValueAtTime(880, at + 0.10);
+      osc.frequency.setValueAtTime(880, at + 0.20);
+      osc.frequency.exponentialRampToValueAtTime(390, at + length);
 
-      formant.type = "bandpass";
-      formant.frequency.setValueAtTime(900, at);
-      formant.frequency.linearRampToValueAtTime(1500, at + 0.14);
-      formant.frequency.linearRampToValueAtTime(700, at + 0.42);
-      formant.Q.value = 4.5;
+      /* A little wobble, which is what stops it sounding synthetic. */
+      vibrato.type = "sine";
+      vibrato.frequency.value = 22;
+      vibratoGain.gain.value = 26;
+      vibrato.connect(vibratoGain);
+      vibratoGain.connect(osc.frequency);
 
+      /* Two formants in parallel stand in for a vocal tract. */
+      const f1 = ctx.createBiquadFilter();
+      f1.type = "bandpass";
+      f1.Q.value = 6;
+      f1.frequency.setValueAtTime(780, at);
+      f1.frequency.linearRampToValueAtTime(1000, at + 0.12);
+      f1.frequency.linearRampToValueAtTime(560, at + length);
+
+      const f2 = ctx.createBiquadFilter();
+      f2.type = "bandpass";
+      f2.Q.value = 8;
+      f2.frequency.setValueAtTime(2100, at);
+      f2.frequency.linearRampToValueAtTime(2500, at + 0.12);
+      f2.frequency.linearRampToValueAtTime(1150, at + length);
+
+      const f2Gain = ctx.createGain();
+      f2Gain.gain.value = 0.5;
+
+      /* Soft attack, long tail, the way a real meow trails off. */
       gain.gain.setValueAtTime(0.0001, at);
-      gain.gain.exponentialRampToValueAtTime(0.075, at + 0.06);
-      gain.gain.setValueAtTime(0.075, at + 0.26);
-      gain.gain.exponentialRampToValueAtTime(0.0001, at + 0.45);
+      gain.gain.exponentialRampToValueAtTime(0.12, at + 0.07);
+      gain.gain.setValueAtTime(0.12, at + 0.24);
+      gain.gain.exponentialRampToValueAtTime(0.0001, at + length);
 
-      osc.connect(formant);
-      formant.connect(gain);
+      osc.connect(f1);
+      osc.connect(f2);
+      f1.connect(gain);
+      f2.connect(f2Gain);
+      f2Gain.connect(gain);
       gain.connect(master);
+
       osc.start(at);
-      osc.stop(at + 0.5);
+      vibrato.start(at);
+      osc.stop(at + length + 0.05);
+      vibrato.stop(at + length + 0.05);
     };
 
 
@@ -4468,7 +4512,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!music) {
         music = new Audio("assets/audio/lofi-soul.mp3");
         music.loop = true;
-        music.volume = 0.22;
+        music.volume = 0.18;
         music.addEventListener("error", () => { music = null; });
       }
 
