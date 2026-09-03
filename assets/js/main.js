@@ -4418,23 +4418,69 @@ document.addEventListener("DOMContentLoaded", () => {
       short low thump, with slight random variation so a run
       of characters does not sound machine-stamped.
     */
+    /*
+      Real keystrokes, sampled from a mechanical keyboard and
+      cut into four separate strikes. Playing a different one
+      each time is what stops a run of typing sounding looped.
+    */
+    const KEY_FILES = [
+      "assets/audio/key1.mp3",
+      "assets/audio/key2.mp3",
+      "assets/audio/key3.mp3",
+      "assets/audio/key4.mp3"
+    ];
+
+    const keyBuffers = [];
+    let keysLoading = false;
+    let lastKey = -1;
+
+    async function loadKeys() {
+      if (keysLoading || keyBuffers.length || !audio()) return;
+      keysLoading = true;
+
+      for (const url of KEY_FILES) {
+        try {
+          const response = await fetch(url);
+          if (!response.ok) continue;
+          const bytes = await response.arrayBuffer();
+          keyBuffers.push(await ctx.decodeAudioData(bytes));
+        } catch (error) {
+          /* A missing sample just means one fewer variation. */
+        }
+      }
+    }
+
     window.__uiKey = () => {
       if (!playing || !audio()) return;
 
       /* The hero keeps typing behind open windows. Stay quiet then. */
       if (document.querySelector(".popup-window.active")) return;
 
-      const at = ctx.currentTime;
-      const vary = 0.94 + Math.random() * 0.14;
+      if (!keyBuffers.length) {
+        loadKeys();
+        return;
+      }
 
-      /*
-        A tighter, drier switch. The noise burst is short and
-        narrow so it reads as a click rather than a hiss, and
-        the body underneath carries most of the weight.
-      */
-      transient({ freq: 3200 * vary, q: 9, length: 0.006, level: 0.05, at });
-      thock({ freq: 165 * vary, length: 0.055, level: 0.13, at, type: "triangle" });
+      /* Never the same sample twice running. */
+      let index = Math.floor(Math.random() * keyBuffers.length);
+      if (keyBuffers.length > 1 && index === lastKey) {
+        index = (index + 1) % keyBuffers.length;
+      }
+      lastKey = index;
+
+      const src = ctx.createBufferSource();
+      const gain = ctx.createGain();
+
+      src.buffer = keyBuffers[index];
+      /* A touch of pitch variation, as with a real hand. */
+      src.playbackRate.value = 0.96 + Math.random() * 0.08;
+      gain.gain.value = 0.5;
+
+      src.connect(gain);
+      gain.connect(master);
+      src.start(ctx.currentTime);
     };
+
 
     /* A firmer, lower version for buttons and windows. */
     window.__uiClick = () => {
@@ -4549,6 +4595,8 @@ document.addEventListener("DOMContentLoaded", () => {
       toggle.setAttribute("aria-label", "Volume: on");
       toggle.title = "Volume: on";
 
+      loadKeys();
+
       try { localStorage.setItem("yassmine.sound", "on"); } catch (e) {}
     }
 
@@ -4566,8 +4614,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
     toggle.addEventListener("click", () => playing ? stop() : start());
 
-    /* Silent until asked. Browsers block audio before a gesture anyway. */
-    stop();
+    /*
+      Sound is on by default, but a browser will not let audio
+      play before someone interacts with the page. So set the
+      visual state now and actually start on the first click,
+      unless the visitor has previously turned it off.
+    */
+    let wanted = "on";
+    try { wanted = localStorage.getItem("yassmine.sound") || "on"; } catch (e) {}
+
+    if (wanted === "off") {
+      stop();
+    } else {
+      /* Show it as on straight away, so the icon matches intent. */
+      toggle.classList.remove("muted");
+      toggle.setAttribute("aria-pressed", "false");
+      toggle.setAttribute("aria-label", "Volume: on");
+      toggle.title = "Volume: on";
+
+      const begin = () => {
+        start();
+        loadKeys();
+        document.removeEventListener("pointerdown", begin);
+        document.removeEventListener("keydown", begin);
+      };
+
+      document.addEventListener("pointerdown", begin, { once: true });
+      document.addEventListener("keydown", begin, { once: true });
+    }
 
 
     /* ---------- What makes a sound ---------- */
