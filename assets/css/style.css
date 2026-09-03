@@ -7156,8 +7156,3 @@ body.lightbox-open { overflow: hidden; }
 /* The header and shelf keep their size; only the page scrolls */
 .library-header,
 .shelf-wrap { flex-shrink: 0; }
-/* Muted state: waves hidden, cross shown */
-#volume .volume-mute { display: none; }
-#volume.muted .volume-wave { display: none; }
-#volume.muted .volume-mute { display: block; }
-#volume.muted .volume-speaker { opacity: .65; }
