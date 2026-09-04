@@ -82,9 +82,9 @@ collections:
                 widget: "list"
                 required: false
                 summary: "{{fields.caption}}"
-                hint: "Add as many as you like. In the image picker you can select several files at once, then upload them together."
+                hint: "Drag several images into the media library at once, then add them to rows here."
                 fields:
-                  - { name: "src", label: "Image", widget: "image" }
+                  - { name: "src", label: "Image", widget: "image", multiple: true }
                   - { name: "caption", label: "Caption", widget: "string", required: false }
               - name: "files"
                 label: "Downloads"
