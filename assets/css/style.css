@@ -6704,7 +6704,7 @@ body.lightbox-open { overflow: hidden; }
   text-decoration: none;
 }
 .project-files a:hover { background: #efe2c6; color: #2b2317; }
-.project-files a::before { content: "\\1F4CE"; font-size: 16px; }
+.project-files a::before { content: "📎"; font-size: 16px; }
 
 @media (max-width: 700px) {
   .project-gallery[data-cols="2"],
