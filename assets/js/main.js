@@ -4034,7 +4034,10 @@ document.addEventListener("DOMContentLoaded", () => {
   */
   function imagePath(value) {
 
-    const name = String(value || "").trim();
+    /* An array can arrive from a multi-select; take the first. */
+    const raw = Array.isArray(value) ? value[0] : value;
+
+    const name = String(raw || "").trim();
 
     if (!name) return "";
 
@@ -4412,9 +4415,11 @@ document.addEventListener("DOMContentLoaded", () => {
       osc.stop(at + length + 0.02);
     }
 
-
-
-
+    /*
+      A mechanical keyswitch: sharp noise transient over a
+      short low thump, with slight random variation so a run
+      of characters does not sound machine-stamped.
+    */
     /* A firmer, lower version for buttons and windows. */
     window.__uiClick = () => {
       if (!playing || !audio()) return;
@@ -4528,7 +4533,6 @@ document.addEventListener("DOMContentLoaded", () => {
       toggle.setAttribute("aria-label", "Volume: on");
       toggle.title = "Volume: on";
 
-
     }
 
     function stop() {
@@ -4573,7 +4577,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const begin = () => {
         start();
-        
         document.removeEventListener("pointerdown", begin);
         document.removeEventListener("keydown", begin);
       };
@@ -4835,12 +4838,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const cols = project.galleryColumns || "2";
 
-      const gallery = Array.isArray(project.gallery) && project.gallery.length
+      /*
+        The picker can return one path or several at once, so a
+        gallery row may hold a string or an array. Flatten both
+        into a single list of images before rendering.
+      */
+      const shots = (Array.isArray(project.gallery) ? project.gallery : [])
+        .flatMap(item => {
+
+          const sources = Array.isArray(item.src) ? item.src : [item.src];
+
+          return sources
+            .filter(Boolean)
+            .map(src => ({ src, caption: item.caption }));
+
+        });
+
+      const gallery = shots.length
         ? `<div class="project-gallery" data-cols="${escapeHtml(cols)}">` +
-          project.gallery.map(item => `
+          shots.map(shot => `
             <figure>
-              <img src="${escapeHtml(imagePath(item.src))}" alt="${escapeHtml(item.caption || project.title)}" loading="lazy">
-              ${item.caption ? `<figcaption>${escapeHtml(item.caption)}</figcaption>` : ""}
+              <img src="${escapeHtml(imagePath(shot.src))}" alt="${escapeHtml(shot.caption || project.title)}" loading="lazy">
+              ${shot.caption ? `<figcaption>${escapeHtml(shot.caption)}</figcaption>` : ""}
             </figure>`).join("") + `</div>`
         : "";
 
