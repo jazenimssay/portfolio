@@ -4528,7 +4528,7 @@ document.addEventListener("DOMContentLoaded", () => {
       toggle.setAttribute("aria-label", "Volume: on");
       toggle.title = "Volume: on";
 
-      loadKeys();
+
     }
 
     function stop() {
@@ -4573,7 +4573,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const begin = () => {
         start();
-        loadKeys();
+        
         document.removeEventListener("pointerdown", begin);
         document.removeEventListener("keydown", begin);
       };
