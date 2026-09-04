@@ -663,7 +663,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!deleting) {
 
         characterIndex++;
-        window.__uiKey?.();
 
         typedRole.textContent =
           role.slice(0, characterIndex);
@@ -4413,82 +4412,7 @@ document.addEventListener("DOMContentLoaded", () => {
       osc.stop(at + length + 0.02);
     }
 
-    /*
-      A mechanical keyswitch: sharp noise transient over a
-      short low thump, with slight random variation so a run
-      of characters does not sound machine-stamped.
-    */
-    /*
-      Real keystrokes, sampled from a mechanical keyboard and
-      cut into four separate strikes. Playing a different one
-      each time is what stops a run of typing sounding looped.
-    */
-    const KEY_FILES = [
-      "assets/audio/key1.mp3",
-      "assets/audio/key2.mp3",
-      "assets/audio/key3.mp3",
-      "assets/audio/key4.mp3"
-    ];
 
-    const keyBuffers = [];
-    let keysLoading = false;
-    let lastKey = -1;
-
-    async function loadKeys() {
-
-      if (keysLoading || keyBuffers.length || !audio()) return;
-
-      keysLoading = true;
-
-      for (const url of KEY_FILES) {
-
-        try {
-          const response = await fetch(url);
-          if (!response.ok) continue;
-          const bytes = await response.arrayBuffer();
-          keyBuffers.push(await ctx.decodeAudioData(bytes));
-        } catch (error) {
-          /* A missing sample just means one fewer variation. */
-        }
-
-      }
-
-      /* Allow another attempt if none of them loaded. */
-      if (!keyBuffers.length) keysLoading = false;
-
-    }
-
-
-    window.__uiKey = () => {
-      if (!playing || !audio()) return;
-
-      /* The hero keeps typing behind open windows. Stay quiet then. */
-      if (document.querySelector(".popup-window.active")) return;
-
-      if (!keyBuffers.length) {
-        loadKeys();
-        return;
-      }
-
-      /* Never the same sample twice running. */
-      let index = Math.floor(Math.random() * keyBuffers.length);
-      if (keyBuffers.length > 1 && index === lastKey) {
-        index = (index + 1) % keyBuffers.length;
-      }
-      lastKey = index;
-
-      const src = ctx.createBufferSource();
-      const gain = ctx.createGain();
-
-      src.buffer = keyBuffers[index];
-      /* A touch of pitch variation, as with a real hand. */
-      src.playbackRate.value = 0.96 + Math.random() * 0.08;
-      gain.gain.value = 0.5;
-
-      src.connect(gain);
-      gain.connect(master);
-      src.start(ctx.currentTime);
-    };
 
 
     /* A firmer, lower version for buttons and windows. */
