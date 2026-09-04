@@ -4435,10 +4435,13 @@ document.addEventListener("DOMContentLoaded", () => {
     let lastKey = -1;
 
     async function loadKeys() {
+
       if (keysLoading || keyBuffers.length || !audio()) return;
+
       keysLoading = true;
 
       for (const url of KEY_FILES) {
+
         try {
           const response = await fetch(url);
           if (!response.ok) continue;
@@ -4447,8 +4450,14 @@ document.addEventListener("DOMContentLoaded", () => {
         } catch (error) {
           /* A missing sample just means one fewer variation. */
         }
+
       }
+
+      /* Allow another attempt if none of them loaded. */
+      if (!keyBuffers.length) keysLoading = false;
+
     }
+
 
     window.__uiKey = () => {
       if (!playing || !audio()) return;
@@ -4596,8 +4605,6 @@ document.addEventListener("DOMContentLoaded", () => {
       toggle.title = "Volume: on";
 
       loadKeys();
-
-      try { localStorage.setItem("yassmine.sound", "on"); } catch (e) {}
     }
 
     function stop() {
@@ -4608,11 +4615,19 @@ document.addEventListener("DOMContentLoaded", () => {
       toggle.setAttribute("aria-pressed", "true");
       toggle.setAttribute("aria-label", "Volume: off");
       toggle.title = "Volume: off";
-
-      try { localStorage.setItem("yassmine.sound", "off"); } catch (e) {}
     }
 
-    toggle.addEventListener("click", () => playing ? stop() : start());
+    toggle.addEventListener("click", () => {
+
+      if (playing) stop(); else start();
+
+      /* Only an explicit click is remembered. Loading the page
+         must never quietly save "off" on the visitor's behalf. */
+      try {
+        localStorage.setItem("yassmine.sound", playing ? "on" : "off");
+      } catch (e) {}
+
+    });
 
     /*
       Sound is on by default, but a browser will not let audio
