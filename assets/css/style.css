@@ -7156,3 +7156,115 @@ body.lightbox-open { overflow: hidden; }
 /* The header and shelf keep their size; only the page scrolls */
 .library-header,
 .shelf-wrap { flex-shrink: 0; }
+
+/* =========================================================
+   LEGAL WINDOW
+   Same chrome as everything else, so the pages exist without
+   changing how the site looks or feels.
+   ========================================================= */
+
+.legal-window {
+  width: min(680px, calc(100vw - 24px));
+  height: min(620px, calc(100vh - 46px));
+}
+
+.legal-content {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: var(--window-content);
+}
+
+/* Tabs match the Studio, so nothing new is introduced */
+.legal-tabs {
+  flex-shrink: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  padding: 8px 10px 0 10px;
+  background: var(--silver-face);
+  border-bottom: 1px solid #a6a7b0;
+}
+
+.legal-tab {
+  min-height: 34px;
+  padding: 7px 10px;
+  border: 1px solid #a6a7b0;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  background: linear-gradient(180deg, #e9eaf1 0%, #d5d7e2 100%);
+  color: #3c3e50;
+  font-size: 14px;
+  font-weight: 700;
+}
+.legal-tab:hover { background: linear-gradient(180deg, #f2f3f8 0%, #e0e2ec 100%); }
+.legal-tab.active {
+  background: var(--window-content);
+  color: #16171f;
+  padding-bottom: 9px;
+  margin-bottom: -1px;
+}
+
+.legal-panel {
+  display: none;
+  padding: 20px 24px 26px 24px;
+  overflow-y: auto;
+  min-height: 0;
+}
+.legal-panel.active { display: block; flex: 1; }
+
+.legal-panel h2 {
+  font-family: var(--xp-titlebar-font);
+  font-size: 22px;
+  color: #16171f;
+}
+.legal-updated {
+  margin: 2px 0 16px 0;
+  font-size: 14px;
+  color: #6b6d80;
+}
+.legal-panel h3 {
+  margin: 20px 0 5px 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #16171f;
+}
+.legal-panel p {
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #33354a;
+}
+.legal-panel a { color: #8a3d06; }
+
+/* ---------- Consent line on the form ---------- */
+
+.form-consent {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #33354a;
+}
+
+.consent-link {
+  min-height: 24px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #8a3d06;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.consent-link:hover { color: #5e2903; }
+
+@media (max-width: 700px) {
+  .legal-tabs { grid-template-columns: 1fr; gap: 3px; padding: 8px; }
+  .legal-tab { border-radius: 3px; border-bottom: 1px solid #a6a7b0; margin-bottom: 0; }
+  .legal-panel { padding: 16px; }
+}
