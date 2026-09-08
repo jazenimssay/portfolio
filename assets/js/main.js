@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     hobbiesPopup: "assets/img/yuki.png",
     sentPopup: "assets/img/work-icon.png",
     adminPopup: "assets/img/portfolio-icon.png",
+    legalPopup: "assets/img/community-icon.png",
     projectPopup: "assets/img/portfolio-icon.png",
   };
 
@@ -5365,6 +5366,65 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener("hashchange", openIfRequested);
     openIfRequested();
+
+  })();
+
+
+  /* =======================================================
+     LEGAL TABS
+     ======================================================= */
+
+  (function initializeLegalTabs() {
+
+    const tabs = $$(".legal-tab");
+    const panels = $$(".legal-panel");
+
+    if (!tabs.length) return;
+
+    const PANELS = {
+      privacy: "legalPrivacy",
+      terms: "legalTerms",
+      cookies: "legalCookies"
+    };
+
+    tabs.forEach(tab => {
+
+      tab.addEventListener("click", () => {
+
+        const target = PANELS[tab.dataset.legal];
+
+        tabs.forEach(other => {
+          const active = other === tab;
+          other.classList.toggle("active", active);
+          other.setAttribute("aria-selected", String(active));
+        });
+
+        panels.forEach(panel => {
+          const active = panel.id === target;
+          panel.classList.toggle("active", active);
+          if (active) panel.scrollTop = 0;
+        });
+
+      });
+
+      /* Arrow keys walk the tabs, as with the other tab strips. */
+      tab.addEventListener("keydown", event => {
+
+        if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+
+        event.preventDefault();
+
+        const index = tabs.indexOf(tab);
+        const next = event.key === "ArrowRight"
+          ? (index + 1) % tabs.length
+          : (index - 1 + tabs.length) % tabs.length;
+
+        tabs[next].focus();
+        tabs[next].click();
+
+      });
+
+    });
 
   })();
 
