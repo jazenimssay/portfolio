@@ -512,6 +512,11 @@
 
       </div>
 
+      <p class="form-consent">
+        I use your details only to reply to you. Nothing is shared or used for marketing.
+        <button type="button" class="consent-link open-popup" data-target="legalPopup">Privacy</button>
+      </p>
+
       <button class="xp-button primary hire-send" type="submit">Send request</button>
 
       <div class="response" aria-live="polite"></div>
@@ -1070,6 +1075,100 @@
     <footer class="status-bar" id="adminStatus">Locked</footer>
   </section>
 
+  <!-- Legal -->
+  <section class="popup-window legal-window" id="legalPopup" data-title="Legal" style="--x: 20vw; --y: 10vh;">
+    <header class="popup-header">
+      <span><img src="assets/img/community-icon.png" alt="">Legal</span>
+      <div class="window-controls">
+        <button class="minimize-popup" title="Minimize" aria-label="Minimize"></button>
+        <button class="maximize-popup" title="Maximize" aria-label="Maximize"></button>
+        <button class="close-popup" title="Close" aria-label="Close"></button>
+      </div>
+    </header>
+
+    <div class="popup-content legal-content" tabindex="-1">
+
+      <div class="legal-tabs" role="tablist" aria-label="Legal sections">
+        <button class="legal-tab active" role="tab" aria-selected="true" data-legal="privacy">Privacy</button>
+        <button class="legal-tab" role="tab" aria-selected="false" data-legal="terms">Terms of use</button>
+        <button class="legal-tab" role="tab" aria-selected="false" data-legal="cookies">Cookies</button>
+      </div>
+
+      <article class="legal-panel active" id="legalPrivacy" role="tabpanel">
+        <h2>Privacy</h2>
+        <p class="legal-updated">Last updated September 2026</p>
+
+        <h3>Who runs this site</h3>
+        <p>This is the personal portfolio of Ouaras Nouara El Yassmine, an independent product and graphic designer based in Algiers, Algeria. You can reach me at <a href="mailto:ouaras.yassmine@gmail.com">ouaras.yassmine@gmail.com</a>.</p>
+
+        <h3>What I collect</h3>
+        <p>Only what you type into the contact form: your name, email address, an optional phone number, the service you are interested in, your project description, and optional budget and timeline. Nothing else is collected, and there is no account to create.</p>
+
+        <h3>Why</h3>
+        <p>So I can reply to you. That is the only reason. I do not use your details for marketing, I do not build a profile, and I do not sell or share them with anyone for their own purposes.</p>
+
+        <h3>How it reaches me</h3>
+        <p>Form submissions are delivered by <a href="https://web3forms.com/privacy" target="_blank" rel="noopener">Web3Forms</a>, which passes them to my email inbox. Their privacy policy governs that step. The site itself is hosted by <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare</a>, which processes standard server logs including IP addresses for security and delivery.</p>
+
+        <h3>How long I keep it</h3>
+        <p>Enquiries stay in my email while a conversation is live and for a reasonable period afterwards in case it resumes. If you would like yours deleted sooner, email me and I will remove it.</p>
+
+        <h3>Tracking</h3>
+        <p>There is none. No analytics, no advertising, no tracking pixels, no third party scripts on this site. I do not know who visits or how many.</p>
+
+        <h3>Your rights</h3>
+        <p>You can ask me what I hold about you, ask for it to be corrected, or ask me to delete it. Email me and I will do it. If you are in the EU or UK, the GDPR gives you these rights formally; I will honour them for anyone regardless of where you are.</p>
+      </article>
+
+      <article class="legal-panel" id="legalTerms" role="tabpanel">
+        <h2>Terms of use</h2>
+        <p class="legal-updated">Last updated September 2026</p>
+
+        <h3>What this site is</h3>
+        <p>A portfolio showing design work I have done, and a way to get in touch. Nothing here is a product, a service being sold, or an offer to contract. No payment is taken on this site.</p>
+
+        <h3>The work shown</h3>
+        <p>Projects are presented to illustrate my design process and skills. Client names, logos and trademarks belong to their respective owners and appear here to identify the work, not to imply any endorsement of me by them.</p>
+
+        <h3>My own material</h3>
+        <p>The writing, layout, illustration and code on this site are mine. Please do not copy them wholesale for your own portfolio. Linking to it, quoting a little with credit, or taking inspiration is all fine.</p>
+
+        <h3>Accuracy</h3>
+        <p>I keep this current and describe my work honestly, but it is a portfolio rather than a specification. If a detail matters to a decision you are making, ask me and I will confirm it.</p>
+
+        <h3>External links</h3>
+        <p>Some projects link to live client sites. I do not control those and am not responsible for their content.</p>
+
+        <h3>Getting in touch</h3>
+        <p>Sending an enquiry does not create a contract or a working relationship. Any project would be agreed separately in writing.</p>
+
+        <h3>Where this applies</h3>
+        <p>I am based in Algeria, and Algerian law governs this site.</p>
+      </article>
+
+      <article class="legal-panel" id="legalCookies" role="tabpanel">
+        <h2>Cookies</h2>
+        <p class="legal-updated">Last updated September 2026</p>
+
+        <h3>The short version</h3>
+        <p>This site sets no cookies and there is nothing to consent to.</p>
+
+        <h3>The longer version</h3>
+        <p>There is one small item saved in your own browser: whether you turned the background sound on or off, so the site remembers your choice next time. It never leaves your device, it is not sent to me, and it identifies nothing about you.</p>
+
+        <p>Under the GDPR and the ePrivacy rules, storage that exists purely to remember a preference you set yourself is exempt from consent requirements. That is why there is no cookie banner. I would rather not interrupt you with a pop-up asking permission for something that does not track you.</p>
+
+        <h3>Clearing it</h3>
+        <p>Clearing your browser data for this site removes it. Nothing breaks; the sound setting simply returns to its default.</p>
+
+        <h3>If that ever changes</h3>
+        <p>If I add analytics at some point, I will add a proper consent banner and update this page first.</p>
+      </article>
+
+    </div>
+    <footer class="status-bar">Questions about any of this? Email ouaras.yassmine@gmail.com</footer>
+  </section>
+
   <!-- Request sent -->
   <section class="popup-window sent-window" id="sentPopup" data-title="Request sent" style="--x: 32vw; --y: 26vh;">
     <header class="popup-header">
@@ -1120,6 +1219,7 @@
         <button class="open-popup" data-target="aboutPopup"><img src="assets/img/community-icon.png" alt=""><span>About Me</span></button>
         <button class="open-popup" data-target="hirePopup"><img src="assets/img/work-icon.png" alt=""><span>Work with Me</span></button>
         <button class="open-popup" data-target="hobbiesPopup"><img src="assets/img/yuki.png" alt=""><span>Yuki&rsquo;s Studio</span></button>
+        <button class="open-popup" data-target="legalPopup"><img src="assets/img/community-icon.png" alt=""><span>Legal</span></button>
       </div>
 
     </div>
