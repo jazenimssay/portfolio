@@ -206,18 +206,41 @@
       "year": "2024",
       "meta": "Brand identity · POS product",
       "image": "tournipos.jpg",
-      "outcome": "Legible at 48 pixels, AAA rated for contrast, and a lesson in defending decisions that I still use.",
+      "outcome": "A complete identity built around TourniPOS's reality: selling, delivering and managing stock while on the move.",
       "featured": false,
       "size": "regular",
-      "summary": "A point of sale app for mobile vendors, who hand it their day's takings before they have any reason to trust it.",
+      "summary": "A mobile commerce platform for distributors and field sellers, bringing sales, stock, customers, deliveries and route management into one place.",
       "client": "TourniPOS by Pentabin",
       "role": "Designer",
       "services": "Brand identity, logo, typography, brand system",
-      "body": "## The problem\n\nTourniPOS serves small business owners, distributors and direct sales vendors in food, cosmetics and cleaning products. Most work mobile or semi mobile, out of a van or from a stall.\n\nThey are handing the app their sales and their stock. It has to look dependable. But the audience is broad and not technical, so anything that read as corporate software would put them off before they downloaded it.\n\nThe brief was blunt: the existing name and visuals did not communicate what the product did.\n\n## What I made\n\n**The mark** is a simplified 3D truck whose back is shaped like a paper receipt. Logistics and record keeping in one form. It says what the app does before a word is read, and it survives being shrunk to an app icon.\n\n**Colour** runs on deep navy for trust, with lighter blues for clarity. Contrast is **AAA rated**, so it is accessible as well as screen ready.\n\n**Type** pairs Reddit Sans for Latin with Tajawal for Arabic. Both modern, both highly legible, and the tone stays consistent across two scripts, which matters more than people expect.\n\n**The system** covers brand safe spacing, minimum sizing rules and mockups for every use case.\n\n## What actually happened\n\nThe final direction was never implemented.\n\nThe difficulty was not technical. It was sustained misalignment with stakeholders about what the brand needed to do, and holding an identity together across shifting expectations took constant iteration and a lot of restraint.\n\nI keep it in the portfolio because the work is good and the lesson was worth more than a smooth project would have been. Communicate the reasoning early. Structure decisions so they can be revisited without starting over. And be able to defend a choice on grounds other than taste, because taste is the one argument nobody has to accept.",
+      "body": "## The problem\n\nTourniPOS is built around a particular kind of selling: distributors and field sellers who manage their business while moving between suppliers and customers.\n\nTheir work doesn't stop at taking a payment. They need to load products, manage stock, prepare orders, deliver them, collect payments, keep track of customers and suppliers, and understand how each route is performing. TourniPOS brings those operations together in one mobile application, including offline use when an internet connection isn't available.\n\nThe problem with the existing logo was simply that it didn't communicate any of that. ![](/assets/img/work/old%20logo.jpg)\n\nThe brief called for a visual identity that could explain the product more clearly, work at app-icon size, and feel reliable without becoming visually heavy or corporate.\n\n## What I made\n\n**The mark** is a simplified 3D truck whose back is shaped like a paper receipt. Logistics and record keeping in one form. It says what the app does before a word is read, and it survives being shrunk to an app icon.\n\n**Colour** runs on deep navy for trust, with lighter blues for clarity. Contrast is **AAA rated**, so it is accessible as well as screen ready.\n\n**Type** pairs Reddit Sans for Latin with Tajawal for Arabic. Both modern, both highly legible, and the tone stays consistent across two scripts, which matters more than people expect.\n\n**The system** covers brand safe spacing, minimum sizing rules and mockups for every use case.\n\n## The result\n\nA complete brand identity designed around the reality of TourniPOS: selling and managing a business while on the move. The system covered the logo, bilingual typography, accessible colour palette and practical brand guidelines, but the final direction was not taken forward for implementation.\n\n## What actually happened\n\nThis project proved to be one of the more challenging experiences in my practice, not due to technical complexity, but because of ongoing misalignment and communication challenges with stakeholders. Balancing varied expectations while maintaining brand integrity required constant iteration, reinforcing the importance of clear communication and structured decision-making in collaborative projects\n\nAlthough the final direction ultimately wasn’t implemented, the project offered meaningful lessons in managing expectations, defending design rationale, and maintaining brand coherence under constraint.\n\n\"You win some, you lose some, but you learn from all.\"",
       "galleryColumns": "2",
-      "gallery": [],
-      "files": [],
-      "link": "",
+      "gallery": [
+        {
+          "src": [
+            "/assets/img/work/Brand identity Tournipos-01.jpg",
+            "/assets/img/work/Brand identity Tournipos-02.jpg",
+            "/assets/img/work/Brand identity Tournipos-03.jpg",
+            "/assets/img/work/Brand identity Tournipos-04.jpg",
+            "/assets/img/work/Brand identity Tournipos-05.jpg",
+            "/assets/img/work/Brand identity Tournipos-06.jpg",
+            "/assets/img/work/Brand identity Tournipos-07.jpg",
+            "/assets/img/work/Brand identity Tournipos-08.jpg",
+            "/assets/img/work/Brand identity Tournipos-09.jpg",
+            "/assets/img/work/Brand identity Tournipos-10.jpg",
+            "/assets/img/work/Brand identity Tournipos-11.jpg",
+            "/assets/img/work/Brand identity Tournipos-12.jpg"
+          ],
+          "caption": ""
+        }
+      ],
+      "files": [
+        {
+          "file": "/assets/img/work/Brand identity Tournipos.pdf",
+          "label": "TourniPOS Brand identity"
+        }
+      ],
+      "link": "https://tournipos.app/fr/acceuil/",
       "date": "2024-06"
     },
     {
@@ -227,7 +250,7 @@
       "slug": "golexy",
       "year": "2024",
       "meta": "Brand identity · Language school",
-      "image": "/assets/img/work/branding-golexy-cover.jpg",
+      "image": "/assets/img/work/branding-golexy-cover-option-2.jpg",
       "outcome": "Welcoming enough for a nervous beginner, credible enough for someone paying for a course.",
       "featured": false,
       "size": "regular",
@@ -331,7 +354,7 @@
           "label": "Central test agency's brand identity"
         }
       ],
-      "link": "https://www.centraltestagency.com/",
+      "link": "https://www.linkedin.com/company/central-test-agency/",
       "date": "2026-01"
     },
     {
@@ -495,7 +518,7 @@
       "slug": "tournipos-playstore",
       "year": "2024",
       "meta": "App store design · POS product",
-      "image": "",
+      "image": "/assets/img/work/branding-TourniPOS-cover.jpg",
       "outcome": "",
       "featured": false,
       "size": "regular",
@@ -503,7 +526,7 @@
       "client": "TourniPOS by Pentabin",
       "role": "Designer",
       "services": "Play Store listing visuals",
-      "body": "## The problem\n\nAn app store listing gets seconds and almost no space. Feature screenshots have to explain the product to someone who has never heard of it, at thumbnail size, usually on a phone, usually while distracted.\n\n## What I did\n\n*Add how many screens, what each one led with, and how you sequenced them. Sequencing is the interesting decision: what earns the first screen when most people never scroll to the third?*\n\n## The result\n\n*Add installs, conversion or client reaction.*\n\n---\n\n*This page still needs your details. See PROJECT-GAPS.md for what to add.*",
+      "body": "## The problem\n\nAn app store listing gets seconds and almost no space. Feature screenshots have to explain the product to someone who has never heard of it, at thumbnail size, usually on a phone, usually while distracted.\n\n## What I did\n\n_Add how many screens, what each one led with, and how you sequenced them. Sequencing is the interesting decision: what earns the first screen when most people never scroll to the third?_\n\n## The result\n\n_Add installs, conversion or client reaction._\n\n***\n\n_This page still needs your details. See PROJECT-GAPS.md for what to add._",
       "galleryColumns": "2",
       "gallery": [],
       "files": [],
