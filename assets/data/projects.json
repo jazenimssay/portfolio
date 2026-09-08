@@ -199,7 +199,7 @@
       "date": "2023-03"
     },
     {
-      "title": "Wassal / TourniPOS, Rebranding",
+      "title": "TourniPOS's Rebranding",
       "cat": "branding",
       "no": "010",
       "slug": "tournipos",
@@ -232,12 +232,26 @@
             "/assets/img/work/Brand identity Tournipos-12.jpg"
           ],
           "caption": ""
+        },
+        {
+          "src": [
+            "/assets/img/work/Artboard 1.jpg",
+            "/assets/img/work/Artboard 2.png",
+            "/assets/img/work/Artboard 3.png",
+            "/assets/img/work/Artboard 4.png",
+            "/assets/img/work/Artboard 5.png",
+            "/assets/img/work/Artboard 6.png",
+            "/assets/img/work/Artboard 7.png",
+            "/assets/img/work/Artboard 8.png",
+            "/assets/img/work/Artboard 9.png"
+          ],
+          "caption": ""
         }
       ],
       "files": [
         {
           "file": "/assets/img/work/Brand identity Tournipos.pdf",
-          "label": "TourniPOS Brand identity"
+          "label": "TourniPOS brand Identity"
         }
       ],
       "link": "https://tournipos.app/fr/acceuil/",
