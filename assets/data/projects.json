@@ -215,39 +215,7 @@
       "services": "Brand identity, logo, typography, brand system",
       "body": "## The problem\n\nTourniPOS is built around a particular kind of selling: distributors and field sellers who manage their business while moving between suppliers and customers.\n\nTheir work doesn't stop at taking a payment. They need to load products, manage stock, prepare orders, deliver them, collect payments, keep track of customers and suppliers, and understand how each route is performing. TourniPOS brings those operations together in one mobile application, including offline use when an internet connection isn't available.\n\nThe problem with the existing logo was simply that it didn't communicate any of that. ![](/assets/img/work/old%20logo.jpg)\n\nThe brief called for a visual identity that could explain the product more clearly, work at app-icon size, and feel reliable without becoming visually heavy or corporate.\n\n## What I made\n\n**The mark** is a simplified 3D truck whose back is shaped like a paper receipt. Logistics and record keeping in one form. It says what the app does before a word is read, and it survives being shrunk to an app icon.\n\n**Colour** runs on deep navy for trust, with lighter blues for clarity. Contrast is **AAA rated**, so it is accessible as well as screen ready.\n\n**Type** pairs Reddit Sans for Latin with Tajawal for Arabic. Both modern, both highly legible, and the tone stays consistent across two scripts, which matters more than people expect.\n\n**The system** covers brand safe spacing, minimum sizing rules and mockups for every use case.\n\n## The result\n\nA complete brand identity designed around the reality of TourniPOS: selling and managing a business while on the move. The system covered the logo, bilingual typography, accessible colour palette and practical brand guidelines, but the final direction was not taken forward for implementation.\n\n## What actually happened\n\nThis project proved to be one of the more challenging experiences in my practice, not due to technical complexity, but because of ongoing misalignment and communication challenges with stakeholders. Balancing varied expectations while maintaining brand integrity required constant iteration, reinforcing the importance of clear communication and structured decision-making in collaborative projects\n\nAlthough the final direction ultimately wasn’t implemented, the project offered meaningful lessons in managing expectations, defending design rationale, and maintaining brand coherence under constraint.\n\n\"You win some, you lose some, but you learn from all.\"",
       "galleryColumns": "2",
-      "gallery": [
-        {
-          "src": [
-            "/assets/img/work/Brand identity Tournipos-01.jpg",
-            "/assets/img/work/Brand identity Tournipos-02.jpg",
-            "/assets/img/work/Brand identity Tournipos-03.jpg",
-            "/assets/img/work/Brand identity Tournipos-04.jpg",
-            "/assets/img/work/Brand identity Tournipos-05.jpg",
-            "/assets/img/work/Brand identity Tournipos-06.jpg",
-            "/assets/img/work/Brand identity Tournipos-07.jpg",
-            "/assets/img/work/Brand identity Tournipos-08.jpg",
-            "/assets/img/work/Brand identity Tournipos-09.jpg",
-            "/assets/img/work/Brand identity Tournipos-10.jpg",
-            "/assets/img/work/Brand identity Tournipos-11.jpg",
-            "/assets/img/work/Brand identity Tournipos-12.jpg"
-          ],
-          "caption": ""
-        },
-        {
-          "src": [
-            "/assets/img/work/Artboard 1.jpg",
-            "/assets/img/work/Artboard 2.png",
-            "/assets/img/work/Artboard 3.png",
-            "/assets/img/work/Artboard 4.png",
-            "/assets/img/work/Artboard 5.png",
-            "/assets/img/work/Artboard 6.png",
-            "/assets/img/work/Artboard 7.png",
-            "/assets/img/work/Artboard 8.png",
-            "/assets/img/work/Artboard 9.png"
-          ],
-          "caption": ""
-        }
-      ],
+      "gallery": [],
       "files": [
         {
           "file": "/assets/img/work/Brand identity Tournipos.pdf",
