@@ -182,19 +182,65 @@
       "no": "009",
       "slug": "didata-rebranding",
       "year": "2023",
-      "meta": "Brand identity · Health data platform",
+      "meta": "Brand identity · Biobanking platform",
       "image": "didata.jpg",
       "outcome": "One visual language across product, marketing and sales, on a charter the team could use without me.",
       "featured": false,
-      "size": "wide",
-      "summary": "A platform asking researchers to trust it with patient data, while looking like any other startup.",
+      "size": "regular",
+      "summary": "Refining an existing identity for a biobanking company, improving its clarity and accessibility without losing the recognition of the original logo.",
       "client": "DiData, Switzerland",
       "role": "Lead Graphic and Product Designer",
       "services": "Brand identity, logo refinement, graphic charter",
-      "body": "## The problem\n\nResearchers have to trust DiData before they put anything sensitive into it, and the identity did not carry that weight. Colour and structure drifted between the product, the decks and the marketing, so every touchpoint looked like a slightly different company.\n\n## The constraint, which made it interesting\n\nExisting clients already recognised the logo. Starting over would have cost that recognition, so the brief was refinement rather than replacement: adjust colour and structure for better clarity, contrast and consistency, while keeping the original mark recognisable.\n\nWorking inside a constraint like that is more interesting than a blank page. You cannot solve it by making something new, you have to understand why the existing thing works and fix only what does not.\n\n## What I did\n\nI kept the mark and rebuilt everything around it, then wrote a full graphic charter so the rules lived outside my head. That charter is what let the team stay consistent after I moved on.\n\n## The result\n\nOne visual language across every touchpoint, and a system that outlasted my involvement, which is the only real test of a brand charter.",
-      "galleryColumns": "2",
-      "gallery": [],
-      "files": [],
+      "body": "## The problem\n\nDiData already had a logo that its clients and partners knew, but the identity had started to show its limitations.\n\nThe logo relied heavily on gradients, and I identified issues with contrast, spacing and visual balance when I audited it. The broader identity also lacked consistency between the different ways the brand was being presented.![](/assets/img/work/DiData%20old%20logo.jpg)\n\nThe solution wasn't to replace the logo. The client wanted to keep its recognizable form, so the challenge became figuring out what could be improved without losing what people already associated with DiData.\n\n## The constraint\n\nStarting from an existing logo meant I couldn't solve the problems by simply designing something I liked better.\n\nI had to identify what was causing the visual issues, preserve the parts that were already recognizable, and make the changes precise enough that the result still felt like DiData.\n\nThat meant working with proportions, spacing, colour and typography rather than treating the logo itself as the whole problem.\n\n## What I did\n\nI took a refinement-first approach. Instead of redrawing the logo from scratch, I kept its original form and rebuilt its proportions, spacing and alignment around a custom grid based on one of its smallest elements: the dot of the “i”.![](/assets/img/work/logo%20rebalancing.jpg)\n\nI also removed the unnecessary gradients from the original identity and reduced the colour palette to two colours: blue and green. The new combinations were chosen with contrast and accessibility in mind, while giving the brand a cleaner and more consistent visual base. ![](/assets/img/work/logo%20colors.jpg)\n\nThe typography was split by context. Urbanist was used for social media, where the geometric character suited the brand's visual tone. For the software and other contexts where readability was more important, I introduced IBM Plex Sans because of its more open forms and legibility at different sizes.\n\nI also moved the visual language away from the existing isometric illustrations and towards flatter, simpler graphics that were faster to load and easier to communicate with.\n\nThe result was not a new logo. It was a more controlled system built around the logo DiData already had.\n\n## The result\n\nThe existing DiData identity became cleaner, more consistent, and easier to apply without replacing the logo people already recognized.\n\nThe refined logo, reduced color palette, bilingual type system, and simplified visual language gave the brand a clearer foundation across its different communications, while the accessibility work made the identity more practical for digital use.",
+      "galleryColumns": "3",
+      "gallery": [
+        {
+          "src": [
+            "/assets/img/work/brand-identity-didata-01.jpg",
+            "/assets/img/work/brand identity didata-02.jpg",
+            "/assets/img/work/brand identity didata-03.jpg",
+            "/assets/img/work/brand identity didata-04.jpg",
+            "/assets/img/work/brand identity didata-05.jpg",
+            "/assets/img/work/brand identity didata-06.jpg",
+            "/assets/img/work/brand identity didata-07.jpg",
+            "/assets/img/work/brand identity didata-08.jpg",
+            "/assets/img/work/brand identity didata-09.jpg",
+            "/assets/img/work/brand identity didata-10.jpg",
+            "/assets/img/work/brand identity didata-11.jpg",
+            "/assets/img/work/brand identity didata-12.jpg",
+            "/assets/img/work/brand identity didata-13.jpg",
+            "/assets/img/work/brand identity didata-14.jpg",
+            "/assets/img/work/brand identity didata-15.jpg",
+            "/assets/img/work/brand identity didata-16.jpg",
+            "/assets/img/work/brand identity didata-17.jpg",
+            "/assets/img/work/brand identity didata-18.jpg",
+            "/assets/img/work/brand identity didata-19.jpg",
+            "/assets/img/work/brand identity didata-20.jpg",
+            "/assets/img/work/brand identity didata-21.jpg"
+          ],
+          "caption": "New didata's brand id"
+        },
+        {
+          "src": [
+            "/assets/img/work/DiData_BI_Cover.jpg",
+            "/assets/img/work/DiData_BI_Fonts.jpg",
+            "/assets/img/work/DiData_BI_Logo construction .jpg",
+            "/assets/img/work/DiData_BI_One-color glyph.jpg",
+            "/assets/img/work/DiData_BI_The Colors.jpg",
+            "/assets/img/work/DiData_BI_The logo-02.jpg",
+            "/assets/img/work/DiData_BI_The logo-03.jpg",
+            "/assets/img/work/DiData_BI_The Visuals illustration.jpg",
+            "/assets/img/work/DiData_BI_The Visuals pattern.jpg"
+          ],
+          "caption": "Old didata's brand identity"
+        }
+      ],
+      "files": [
+        {
+          "file": "/assets/img/work/brand identity didata.pdf",
+          "label": "DiData's new brand identity"
+        }
+      ],
       "link": "https://swissdidata.com/",
       "date": "2023-03"
     },
