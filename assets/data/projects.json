@@ -364,10 +364,25 @@
       "galleryColumns": "2",
       "gallery": [
         {
+          "src": [
+            "/assets/img/work/Brand identity Le grand cinema-01.jpg",
+            "/assets/img/work/Brand identity Le grand cinema-02.jpg",
+            "/assets/img/work/Brand identity Le grand cinema-03.jpg",
+            "/assets/img/work/Brand identity Le grand cinema-04.jpg",
+            "/assets/img/work/Brand identity Le grand cinema-05.jpg",
+            "/assets/img/work/Brand identity Le grand cinema-06.jpg",
+            "/assets/img/work/Brand identity Le grand cinema-07.jpg",
+            "/assets/img/work/Brand identity Le grand cinema-08.jpg"
+          ],
           "caption": ""
         }
       ],
-      "files": [],
+      "files": [
+        {
+          "file": "/assets/img/work/Brand identity grand cine.pdf",
+          "label": "Grand ciné brand's id"
+        }
+      ],
       "link": "",
       "date": "2022-05"
     },
