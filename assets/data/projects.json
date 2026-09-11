@@ -198,31 +198,9 @@
       "date": "2023-05"
     },
     {
-      "title": "DiData, Presentation Templates",
-      "cat": "digital",
-      "no": "007",
-      "slug": "didata-decks",
-      "year": "2024",
-      "meta": "Template design · Internal tooling",
-      "image": "",
-      "outcome": "80+ decks, infographics and assets built by the team, on templates they did not need me to make.",
-      "featured": false,
-      "size": "regular",
-      "summary": "Letting a team build its own decks without the brand quietly falling apart.",
-      "client": "DiData, Switzerland",
-      "role": "Lead Designer",
-      "services": "Presentation templates",
-      "body": "## The problem\n\nDecks are where brands come undone. They get built fast, by people who are not designers, the night before a meeting. No charter survives that unless the templates make the right thing easier than the wrong thing.\n\n## What I did\n\nA template system covering the recurring slide types, built so someone with no design training could assemble a deck that stayed on brand without thinking about it.\n\n## The result\n\n**80+ slide decks, infographics, print materials and social assets** produced across the team, in collaboration with product, engineering and marketing.\n\nThe point of a system is that the work stops depending on the designer. That is what this was for, and it is the part of the job I find most satisfying.",
-      "galleryColumns": "2",
-      "gallery": [],
-      "files": [],
-      "link": "",
-      "date": "2024-08"
-    },
-    {
       "title": "DiData, Website",
       "cat": "product",
-      "no": "008",
+      "no": "007",
       "slug": "didata-website",
       "year": "2023",
       "meta": "Web design · Health data platform",
@@ -234,7 +212,7 @@
       "client": "DiData, Switzerland",
       "role": "Lead Graphic and Product Designer",
       "services": "UX, UI, navigation and structure",
-      "body": "## The problem\n\nDiData's platform is genuinely complex, and complexity has a way of leaking into the website that describes it. The risk is a site written for people who already understand, which is the one group that does not need it.\n\n## What I did\n\nI led the redesign, improving navigation, clarity and user experience through UX best practice and user centered thinking.\n\n*Name the two or three biggest changes. What was the old structure, and what replaced it?*\n\n## The result\n\n*Add the outcome.*",
+      "body": "## The problem\n\nDiData's platform is genuinely complex, and complexity has a way of leaking into the website that describes it. The risk is a site written for people who already understand, which is the one group that does not need it.\n\n## What I did\n\nI led the redesign, improving navigation, clarity and user experience through UX best practice and user centered thinking.\n\n_Name the two or three biggest changes. What was the old structure, and what replaced it?_\n\n## The result\n\n_Add the outcome._",
       "galleryColumns": "2",
       "gallery": [],
       "files": [],
@@ -244,7 +222,7 @@
     {
       "title": "DiData, Print",
       "cat": "digital",
-      "no": "009",
+      "no": "008",
       "slug": "didata-print",
       "year": "2023",
       "meta": "Print design · Events and collateral",
@@ -266,7 +244,7 @@
     {
       "title": "DiData, Email",
       "cat": "digital",
-      "no": "010",
+      "no": "009",
       "slug": "didata-email",
       "year": "2024",
       "meta": "Email design · Newsletters and footers",
@@ -288,7 +266,7 @@
     {
       "title": "DiData, Blog Covers",
       "cat": "digital",
-      "no": "011",
+      "no": "010",
       "slug": "didata-blog-covers",
       "year": "2024",
       "meta": "Editorial design · Blog and LinkedIn",
@@ -310,7 +288,7 @@
     {
       "title": "DiData, Software",
       "cat": "product",
-      "no": "012",
+      "no": "011",
       "slug": "didata-software",
       "year": "2023",
       "meta": "Product design · Biobanking software",
@@ -332,7 +310,7 @@
     {
       "title": "DiData, Video",
       "cat": "digital",
-      "no": "013",
+      "no": "012",
       "slug": "didata-video",
       "year": "2024",
       "meta": "Motion design · Short form video",
@@ -354,7 +332,7 @@
     {
       "title": "True North",
       "cat": "product",
-      "no": "014",
+      "no": "013",
       "slug": "true-north",
       "year": "2023",
       "meta": "UX research · Mobile app · Thesis",
@@ -376,7 +354,7 @@
     {
       "title": "Acile, Social Media",
       "cat": "digital",
-      "no": "015",
+      "no": "014",
       "slug": "acile-social",
       "year": "2024",
       "meta": "Social media",
@@ -398,7 +376,7 @@
     {
       "title": "TourniPOS's Rebranding",
       "cat": "branding",
-      "no": "016",
+      "no": "015",
       "slug": "tournipos",
       "year": "2024",
       "meta": "Brand identity · POS product",
@@ -452,7 +430,7 @@
     {
       "title": "Golexy",
       "cat": "branding",
-      "no": "017",
+      "no": "016",
       "slug": "golexy",
       "year": "2024",
       "meta": "Brand identity · Language school",
@@ -499,7 +477,7 @@
     {
       "title": "Yinvest, Website Redesign",
       "cat": "product",
-      "no": "018",
+      "no": "017",
       "slug": "yinvest-website",
       "year": "2025",
       "meta": "Web design · Investment platform",
@@ -521,7 +499,7 @@
     {
       "title": "Yinvest, Software",
       "cat": "product",
-      "no": "019",
+      "no": "018",
       "slug": "yinvest-software",
       "year": "2025",
       "meta": "Product design · Investment platform",
@@ -543,7 +521,7 @@
     {
       "title": "Porte Ticket, Agence Abderrahmane",
       "cat": "digital",
-      "no": "020",
+      "no": "019",
       "slug": "porte-ticket",
       "year": "2026",
       "meta": "Print design · Travel agency",
@@ -565,7 +543,7 @@
     {
       "title": "Central Test Agency, Branding",
       "cat": "branding",
-      "no": "021",
+      "no": "020",
       "slug": "central-test-agency",
       "year": "2026",
       "meta": "Brand identity · QA agency",
@@ -610,7 +588,7 @@
     {
       "title": "Central Test Agency, Social",
       "cat": "digital",
-      "no": "022",
+      "no": "021",
       "slug": "cta-social",
       "year": "2026",
       "meta": "Social media · QA agency",
@@ -632,7 +610,7 @@
     {
       "title": "Confirmoo, UX Audit",
       "cat": "product",
-      "no": "023",
+      "no": "022",
       "slug": "confirmoo-ux-audit",
       "year": "2025",
       "meta": "UX audit · E-commerce SaaS",
@@ -654,7 +632,7 @@
     {
       "title": "Confirmoo, Website Redesign",
       "cat": "product",
-      "no": "024",
+      "no": "023",
       "slug": "confirmoo-website",
       "year": "2025",
       "meta": "Web design · E-commerce SaaS",
@@ -676,7 +654,7 @@
     {
       "title": "Confirmoo, Software Redesign",
       "cat": "product",
-      "no": "025",
+      "no": "024",
       "slug": "confirmoo-software",
       "year": "2025",
       "meta": "Product design · Web app",
