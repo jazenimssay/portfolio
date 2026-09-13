@@ -78,14 +78,27 @@ collections:
                   - { label: "Two per row",              value: "2" }
                   - { label: "Three per row",            value: "3" }
               - name: "gallery"
-                label: "Image gallery"
+                label: "Gallery sections"
+                label_singular: "Section"
                 widget: "list"
                 required: false
-                summary: "{{fields.caption}}"
-                hint: "Drag several images into the media library at once, then add them to rows here."
+                summary: "{{fields.heading}} ({{fields.columns}} per row)"
+                hint: "Each section has its own layout. Add one section for a 3-wide grid, another for a 7-wide carousel strip."
                 fields:
-                  - { name: "src", label: "Image", widget: "image", multiple: true }
-                  - { name: "caption", label: "Caption", widget: "string", required: false }
+                  - { name: "heading", label: "Section heading", widget: "string", required: false, hint: "Optional, e.g. Logo explorations" }
+                  - name: "columns"
+                    label: "Per row"
+                    widget: "select"
+                    default: "2"
+                    options: ["1", "2", "3", "4", "5", "6", "7"]
+                  - name: "items"
+                    label: "Images and videos"
+                    label_singular: "Item"
+                    widget: "list"
+                    summary: "{{fields.caption}}"
+                    fields:
+                      - { name: "src", label: "File", widget: "file", hint: "Image or video. mp4, webm and mov play as video." }
+                      - { name: "caption", label: "Caption", widget: "string", required: false }
               - name: "files"
                 label: "Downloads"
                 widget: "list"
