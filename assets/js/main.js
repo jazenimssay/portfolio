@@ -4849,16 +4849,31 @@ document.addEventListener("DOMContentLoaded", () => {
       */
       function mediaTag(item, fallbackAlt) {
 
-        const path = imagePath(item.src);
         const label = item.caption || fallbackAlt;
 
-        /* Anything with a video extension plays rather than shows. */
-        if (/\.(mp4|webm|ogv|mov)$/i.test(path)) {
-          return `<video src="${escapeHtml(path)}" controls preload="metadata"
+        /*
+          An item is an image, a video, or an image used as the
+          poster for a video. The video field is separate from
+          the image one so the content manager can still show a
+          thumbnail: its file picker has no preview, its image
+          picker does.
+        */
+        const video = imagePath(item.video);
+        const still = imagePath(item.src);
+
+        if (video) {
+          return `<video src="${escapeHtml(video)}" controls preload="metadata"
+                    playsinline ${still ? `poster="${escapeHtml(still)}"` : ""}
+                    aria-label="${escapeHtml(label)}"></video>`;
+        }
+
+        /* A video path in the image field still plays, for older entries. */
+        if (/\.(mp4|webm|ogv|mov)$/i.test(still)) {
+          return `<video src="${escapeHtml(still)}" controls preload="metadata"
                     playsinline aria-label="${escapeHtml(label)}"></video>`;
         }
 
-        return `<img src="${escapeHtml(path)}" alt="${escapeHtml(label)}" loading="lazy">`;
+        return `<img src="${escapeHtml(still)}" alt="${escapeHtml(label)}" loading="lazy">`;
 
       }
 
@@ -4866,8 +4881,18 @@ document.addEventListener("DOMContentLoaded", () => {
       function sectionMarkup(items, columns, heading) {
 
         const shots = items.flatMap(item => {
+
+          /* A video-only row has no src, but still counts as one item. */
+          if (item.video && !item.src) {
+            return [{ src: "", video: item.video, caption: item.caption }];
+          }
+
           const sources = Array.isArray(item.src) ? item.src : [item.src];
-          return sources.filter(Boolean).map(src => ({ src, caption: item.caption }));
+
+          return sources
+            .filter(Boolean)
+            .map(src => ({ src, video: item.video, caption: item.caption }));
+
         });
 
         if (!shots.length) return "";
