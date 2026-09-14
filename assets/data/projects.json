@@ -19,17 +19,50 @@
       "galleryColumns": "1",
       "gallery": [
         {
-          "src": [
-            "/assets/img/work/Brand identity Le grand cinema-01.jpg",
-            "/assets/img/work/Brand identity Le grand cinema-02.jpg",
-            "/assets/img/work/Brand identity Le grand cinema-03.jpg",
-            "/assets/img/work/Brand identity Le grand cinema-04.jpg",
-            "/assets/img/work/Brand identity Le grand cinema-05.jpg",
-            "/assets/img/work/Brand identity Le grand cinema-06.jpg",
-            "/assets/img/work/Brand identity Le grand cinema-07.jpg",
-            "/assets/img/work/Brand identity Le grand cinema-08.jpg"
-          ],
-          "caption": ""
+          "heading": "",
+          "columns": "1",
+          "items": [
+            {
+              "src": "/assets/img/work/Brand identity Le grand cinema-01.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Brand identity Le grand cinema-02.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Brand identity Le grand cinema-03.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Brand identity Le grand cinema-04.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Brand identity Le grand cinema-05.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Brand identity Le grand cinema-06.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Brand identity Le grand cinema-07.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Brand identity Le grand cinema-08.jpg",
+              "video": "",
+              "caption": ""
+            }
+          ]
         }
       ],
       "files": [
@@ -60,36 +93,145 @@
       "galleryColumns": "3",
       "gallery": [
         {
-          "src": [
-            "/assets/img/work/1.jpg",
-            "/assets/img/work/2.jpg",
-            "/assets/img/work/3.jpg",
-            "/assets/img/work/4.jpg",
-            "/assets/img/work/5.jpg",
-            "/assets/img/work/6.jpg",
-            "/assets/img/work/7-caroussel1 (1).jpg",
-            "/assets/img/work/7-caroussel1 (2).jpg",
-            "/assets/img/work/7-caroussel1 (3).jpg",
-            "/assets/img/work/7-caroussel1 (4).jpg",
-            "/assets/img/work/7-caroussel1 (5).jpg",
-            "/assets/img/work/7-caroussel1 (6).jpg",
-            "/assets/img/work/7-caroussel1 (7).jpg",
-            "/assets/img/work/22-caroussel (0).jpg",
-            "/assets/img/work/22-caroussel (1).jpg",
-            "/assets/img/work/22-caroussel (2).jpg",
-            "/assets/img/work/22-caroussel (3).jpg",
-            "/assets/img/work/23-surprise1 (1).jpg",
-            "/assets/img/work/23-surprise1 (2).jpg",
-            "/assets/img/work/23-surprise1 (3).jpg",
-            "/assets/img/work/23-surprise1 (4).jpg",
-            "/assets/img/work/food-ramadan-vs-year.jpg",
-            "/assets/img/work/11.jpg",
-            "/assets/img/work/what-stage.jpg",
-            "/assets/img/work/8.jpg",
-            "/assets/img/work/9.jpg",
-            "/assets/img/work/21.jpg"
-          ],
-          "caption": ""
+          "heading": "",
+          "columns": "3",
+          "items": [
+            {
+              "src": "/assets/img/work/1.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/2.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/3.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/4.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/5.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/6.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/7-caroussel1 (1).jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/7-caroussel1 (2).jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/7-caroussel1 (3).jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/7-caroussel1 (4).jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/7-caroussel1 (5).jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/7-caroussel1 (6).jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/7-caroussel1 (7).jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/22-caroussel (0).jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/22-caroussel (1).jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/22-caroussel (2).jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/22-caroussel (3).jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/23-surprise1 (1).jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/23-surprise1 (2).jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/23-surprise1 (3).jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/23-surprise1 (4).jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/food-ramadan-vs-year.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/11.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/what-stage.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/8.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/9.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/21.jpg",
+              "video": "",
+              "caption": ""
+            }
+          ]
         }
       ],
       "files": [],
@@ -159,44 +301,160 @@
       "galleryColumns": "3",
       "gallery": [
         {
-          "src": [
-            "/assets/img/work/brand-identity-didata-01.jpg",
-            "/assets/img/work/brand identity didata-02.jpg",
-            "/assets/img/work/brand identity didata-03.jpg",
-            "/assets/img/work/brand identity didata-04.jpg",
-            "/assets/img/work/brand identity didata-05.jpg",
-            "/assets/img/work/brand identity didata-06.jpg",
-            "/assets/img/work/brand identity didata-07.jpg",
-            "/assets/img/work/brand identity didata-08.jpg",
-            "/assets/img/work/brand identity didata-09.jpg",
-            "/assets/img/work/brand identity didata-10.jpg",
-            "/assets/img/work/brand identity didata-11.jpg",
-            "/assets/img/work/brand identity didata-12.jpg",
-            "/assets/img/work/brand identity didata-13.jpg",
-            "/assets/img/work/brand identity didata-14.jpg",
-            "/assets/img/work/brand identity didata-15.jpg",
-            "/assets/img/work/brand identity didata-16.jpg",
-            "/assets/img/work/brand identity didata-17.jpg",
-            "/assets/img/work/brand identity didata-18.jpg",
-            "/assets/img/work/brand identity didata-19.jpg",
-            "/assets/img/work/brand identity didata-20.jpg",
-            "/assets/img/work/brand identity didata-21.jpg"
-          ],
-          "caption": "New didata's brand id"
-        },
-        {
-          "src": [
-            "/assets/img/work/DiData_BI_Cover.jpg",
-            "/assets/img/work/DiData_BI_Fonts.jpg",
-            "/assets/img/work/DiData_BI_Logo construction .jpg",
-            "/assets/img/work/DiData_BI_One-color glyph.jpg",
-            "/assets/img/work/DiData_BI_The Colors.jpg",
-            "/assets/img/work/DiData_BI_The logo-02.jpg",
-            "/assets/img/work/DiData_BI_The logo-03.jpg",
-            "/assets/img/work/DiData_BI_The Visuals illustration.jpg",
-            "/assets/img/work/DiData_BI_The Visuals pattern.jpg"
-          ],
-          "caption": "Old didata's brand identity"
+          "heading": "",
+          "columns": "3",
+          "items": [
+            {
+              "src": "/assets/img/work/brand-identity-didata-01.jpg",
+              "video": "",
+              "caption": "New didata's brand id"
+            },
+            {
+              "src": "/assets/img/work/brand identity didata-02.jpg",
+              "video": "",
+              "caption": "New didata's brand id"
+            },
+            {
+              "src": "/assets/img/work/brand identity didata-03.jpg",
+              "video": "",
+              "caption": "New didata's brand id"
+            },
+            {
+              "src": "/assets/img/work/brand identity didata-04.jpg",
+              "video": "",
+              "caption": "New didata's brand id"
+            },
+            {
+              "src": "/assets/img/work/brand identity didata-05.jpg",
+              "video": "",
+              "caption": "New didata's brand id"
+            },
+            {
+              "src": "/assets/img/work/brand identity didata-06.jpg",
+              "video": "",
+              "caption": "New didata's brand id"
+            },
+            {
+              "src": "/assets/img/work/brand identity didata-07.jpg",
+              "video": "",
+              "caption": "New didata's brand id"
+            },
+            {
+              "src": "/assets/img/work/brand identity didata-08.jpg",
+              "video": "",
+              "caption": "New didata's brand id"
+            },
+            {
+              "src": "/assets/img/work/brand identity didata-09.jpg",
+              "video": "",
+              "caption": "New didata's brand id"
+            },
+            {
+              "src": "/assets/img/work/brand identity didata-10.jpg",
+              "video": "",
+              "caption": "New didata's brand id"
+            },
+            {
+              "src": "/assets/img/work/brand identity didata-11.jpg",
+              "video": "",
+              "caption": "New didata's brand id"
+            },
+            {
+              "src": "/assets/img/work/brand identity didata-12.jpg",
+              "video": "",
+              "caption": "New didata's brand id"
+            },
+            {
+              "src": "/assets/img/work/brand identity didata-13.jpg",
+              "video": "",
+              "caption": "New didata's brand id"
+            },
+            {
+              "src": "/assets/img/work/brand identity didata-14.jpg",
+              "video": "",
+              "caption": "New didata's brand id"
+            },
+            {
+              "src": "/assets/img/work/brand identity didata-15.jpg",
+              "video": "",
+              "caption": "New didata's brand id"
+            },
+            {
+              "src": "/assets/img/work/brand identity didata-16.jpg",
+              "video": "",
+              "caption": "New didata's brand id"
+            },
+            {
+              "src": "/assets/img/work/brand identity didata-17.jpg",
+              "video": "",
+              "caption": "New didata's brand id"
+            },
+            {
+              "src": "/assets/img/work/brand identity didata-18.jpg",
+              "video": "",
+              "caption": "New didata's brand id"
+            },
+            {
+              "src": "/assets/img/work/brand identity didata-19.jpg",
+              "video": "",
+              "caption": "New didata's brand id"
+            },
+            {
+              "src": "/assets/img/work/brand identity didata-20.jpg",
+              "video": "",
+              "caption": "New didata's brand id"
+            },
+            {
+              "src": "/assets/img/work/brand identity didata-21.jpg",
+              "video": "",
+              "caption": "New didata's brand id"
+            },
+            {
+              "src": "/assets/img/work/DiData_BI_Cover.jpg",
+              "video": "",
+              "caption": "Old didata's brand identity"
+            },
+            {
+              "src": "/assets/img/work/DiData_BI_Fonts.jpg",
+              "video": "",
+              "caption": "Old didata's brand identity"
+            },
+            {
+              "src": "/assets/img/work/DiData_BI_Logo construction .jpg",
+              "video": "",
+              "caption": "Old didata's brand identity"
+            },
+            {
+              "src": "/assets/img/work/DiData_BI_One-color glyph.jpg",
+              "video": "",
+              "caption": "Old didata's brand identity"
+            },
+            {
+              "src": "/assets/img/work/DiData_BI_The Colors.jpg",
+              "video": "",
+              "caption": "Old didata's brand identity"
+            },
+            {
+              "src": "/assets/img/work/DiData_BI_The logo-02.jpg",
+              "video": "",
+              "caption": "Old didata's brand identity"
+            },
+            {
+              "src": "/assets/img/work/DiData_BI_The logo-03.jpg",
+              "video": "",
+              "caption": "Old didata's brand identity"
+            },
+            {
+              "src": "/assets/img/work/DiData_BI_The Visuals illustration.jpg",
+              "video": "",
+              "caption": "Old didata's brand identity"
+            },
+            {
+              "src": "/assets/img/work/DiData_BI_The Visuals pattern.jpg",
+              "video": "",
+              "caption": "Old didata's brand identity"
+            }
+          ]
         }
       ],
       "files": [
@@ -403,30 +661,115 @@
       "galleryColumns": "2",
       "gallery": [
         {
-          "src": [
-            "/assets/img/work/Brand identity Tournipos-01.jpg",
-            "/assets/img/work/Brand identity Tournipos-02.jpg",
-            "/assets/img/work/Brand identity Tournipos-03.jpg",
-            "/assets/img/work/Brand identity Tournipos-04.jpg",
-            "/assets/img/work/Brand identity Tournipos-05.jpg",
-            "/assets/img/work/Brand identity Tournipos-06.jpg",
-            "/assets/img/work/Brand identity Tournipos-07.jpg",
-            "/assets/img/work/Brand identity Tournipos-08.jpg",
-            "/assets/img/work/Brand identity Tournipos-09.jpg",
-            "/assets/img/work/Brand identity Tournipos-10.jpg",
-            "/assets/img/work/Brand identity Tournipos-11.jpg",
-            "/assets/img/work/Brand identity Tournipos-12.jpg",
-            "/assets/img/work/Artboard 1.jpg",
-            "/assets/img/work/Artboard 2.png",
-            "/assets/img/work/Artboard 3.png",
-            "/assets/img/work/Artboard 4.png",
-            "/assets/img/work/Artboard 5.png",
-            "/assets/img/work/Artboard 6.png",
-            "/assets/img/work/Artboard 7.png",
-            "/assets/img/work/Artboard 8.png",
-            "/assets/img/work/Artboard 9.png"
-          ],
-          "caption": ""
+          "heading": "",
+          "columns": "2",
+          "items": [
+            {
+              "src": "/assets/img/work/Brand identity Tournipos-01.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Brand identity Tournipos-02.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Brand identity Tournipos-03.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Brand identity Tournipos-04.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Brand identity Tournipos-05.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Brand identity Tournipos-06.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Brand identity Tournipos-07.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Brand identity Tournipos-08.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Brand identity Tournipos-09.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Brand identity Tournipos-10.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Brand identity Tournipos-11.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Brand identity Tournipos-12.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Artboard 1.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Artboard 2.png",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Artboard 3.png",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Artboard 4.png",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Artboard 5.png",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Artboard 6.png",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Artboard 7.png",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Artboard 8.png",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Artboard 9.png",
+              "video": "",
+              "caption": ""
+            }
+          ]
         }
       ],
       "files": [
@@ -457,23 +800,80 @@
       "galleryColumns": "2",
       "gallery": [
         {
-          "src": [
-            "/assets/img/work/Brand identity golexy-01.jpg",
-            "/assets/img/work/Brand identity golexy-02.jpg",
-            "/assets/img/work/Brand identity golexy-03.jpg",
-            "/assets/img/work/Brand identity golexy-04.jpg",
-            "/assets/img/work/Brand identity golexy-05.jpg",
-            "/assets/img/work/Brand identity golexy-06.jpg",
-            "/assets/img/work/Brand identity golexy-07.jpg",
-            "/assets/img/work/Brand identity golexy-08.jpg",
-            "/assets/img/work/Brand identity golexy-09.jpg",
-            "/assets/img/work/Brand identity golexy-10.jpg",
-            "/assets/img/work/Brand identity golexy-11.jpg",
-            "/assets/img/work/Brand identity golexy-12.jpg",
-            "/assets/img/work/Brand identity golexy-13.jpg",
-            "/assets/img/work/Brand identity golexy-14.jpg"
-          ],
-          "caption": ""
+          "heading": "",
+          "columns": "2",
+          "items": [
+            {
+              "src": "/assets/img/work/Brand identity golexy-01.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Brand identity golexy-02.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Brand identity golexy-03.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Brand identity golexy-04.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Brand identity golexy-05.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Brand identity golexy-06.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Brand identity golexy-07.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Brand identity golexy-08.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Brand identity golexy-09.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Brand identity golexy-10.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Brand identity golexy-11.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Brand identity golexy-12.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Brand identity golexy-13.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/Brand identity golexy-14.jpg",
+              "video": "",
+              "caption": ""
+            }
+          ]
         }
       ],
       "files": [
@@ -570,21 +970,70 @@
       "galleryColumns": "1",
       "gallery": [
         {
-          "src": [
-            "/assets/img/work/00.brand id-01.jpg",
-            "/assets/img/work/00.brand id-02.jpg",
-            "/assets/img/work/00.brand id-03.jpg",
-            "/assets/img/work/00.brand id-04.jpg",
-            "/assets/img/work/00.brand id-05.jpg",
-            "/assets/img/work/00.brand id-06.jpg",
-            "/assets/img/work/00.brand id-07.jpg",
-            "/assets/img/work/00.brand id-08.jpg",
-            "/assets/img/work/00.brand id-09.jpg",
-            "/assets/img/work/00.brand id-10.jpg",
-            "/assets/img/work/00.brand id-11.jpg",
-            "/assets/img/work/00.brand id-12.jpg"
-          ],
-          "caption": ""
+          "heading": "",
+          "columns": "1",
+          "items": [
+            {
+              "src": "/assets/img/work/00.brand id-01.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/00.brand id-02.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/00.brand id-03.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/00.brand id-04.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/00.brand id-05.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/00.brand id-06.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/00.brand id-07.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/00.brand id-08.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/00.brand id-09.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/00.brand id-10.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/00.brand id-11.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/00.brand id-12.jpg",
+              "video": "",
+              "caption": ""
+            }
+          ]
         }
       ],
       "files": [
