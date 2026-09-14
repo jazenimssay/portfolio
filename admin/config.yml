@@ -97,7 +97,8 @@ collections:
                     widget: "list"
                     summary: "{{fields.caption}}"
                     fields:
-                      - { name: "src", label: "File", widget: "file", hint: "Image or video. mp4, webm and mov play as video." }
+                      - { name: "src", label: "Image", widget: "image", required: false }
+                      - { name: "video", label: "Video", widget: "file", required: false, hint: "Optional. mp4 or webm. If you also add an image above it becomes the thumbnail." }
                       - { name: "caption", label: "Caption", widget: "string", required: false }
               - name: "files"
                 label: "Downloads"
