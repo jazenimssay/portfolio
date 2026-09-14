@@ -127,6 +127,42 @@
               "caption": ""
             },
             {
+              "src": "/assets/img/work/8.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/9.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/21.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/food-ramadan-vs-year.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/11.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/what-stage.jpg",
+              "video": "",
+              "caption": ""
+            }
+          ]
+        },
+        {
+          "heading": "",
+          "columns": "7",
+          "items": [
+            {
               "src": "/assets/img/work/7-caroussel1 (1).jpg",
               "video": "",
               "caption": ""
@@ -160,7 +196,13 @@
               "src": "/assets/img/work/7-caroussel1 (7).jpg",
               "video": "",
               "caption": ""
-            },
+            }
+          ]
+        },
+        {
+          "heading": "",
+          "columns": "4",
+          "items": [
             {
               "src": "/assets/img/work/22-caroussel (0).jpg",
               "video": "",
@@ -172,15 +214,16 @@
               "caption": ""
             },
             {
-              "src": "/assets/img/work/22-caroussel (2).jpg",
-              "video": "",
-              "caption": ""
-            },
-            {
               "src": "/assets/img/work/22-caroussel (3).jpg",
               "video": "",
               "caption": ""
-            },
+            }
+          ]
+        },
+        {
+          "heading": "",
+          "columns": "4",
+          "items": [
             {
               "src": "/assets/img/work/23-surprise1 (1).jpg",
               "video": "",
@@ -198,36 +241,6 @@
             },
             {
               "src": "/assets/img/work/23-surprise1 (4).jpg",
-              "video": "",
-              "caption": ""
-            },
-            {
-              "src": "/assets/img/work/food-ramadan-vs-year.jpg",
-              "video": "",
-              "caption": ""
-            },
-            {
-              "src": "/assets/img/work/11.jpg",
-              "video": "",
-              "caption": ""
-            },
-            {
-              "src": "/assets/img/work/what-stage.jpg",
-              "video": "",
-              "caption": ""
-            },
-            {
-              "src": "/assets/img/work/8.jpg",
-              "video": "",
-              "caption": ""
-            },
-            {
-              "src": "/assets/img/work/9.jpg",
-              "video": "",
-              "caption": ""
-            },
-            {
-              "src": "/assets/img/work/21.jpg",
               "video": "",
               "caption": ""
             }
