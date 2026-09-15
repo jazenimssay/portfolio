@@ -142,17 +142,32 @@
               "caption": ""
             },
             {
-              "src": "/assets/img/work/food-ramadan-vs-year.jpg",
-              "video": "",
-              "caption": ""
-            },
-            {
               "src": "/assets/img/work/11.jpg",
               "video": "",
               "caption": ""
             },
             {
+              "src": "",
+              "video": "/assets/img/work/10.mp4",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/12.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/food-ramadan-vs-year.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
               "src": "/assets/img/work/what-stage.jpg",
+              "video": "",
+              "caption": ""
+            },
+            {
+              "src": "/assets/img/work/20.jpg",
               "video": "",
               "caption": ""
             }
@@ -241,6 +256,17 @@
             },
             {
               "src": "/assets/img/work/23-surprise1 (4).jpg",
+              "video": "",
+              "caption": ""
+            }
+          ]
+        },
+        {
+          "heading": "",
+          "columns": "2",
+          "items": [
+            {
+              "src": "",
               "video": "",
               "caption": ""
             }
